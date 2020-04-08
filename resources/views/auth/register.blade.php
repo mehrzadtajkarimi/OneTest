@@ -17,15 +17,63 @@
                     <h3>خوش آمدید!</h3>
                     <p>حساب کاربری برای خود بسازید
                     </p>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control @error('name') is-invalid @enderror"
                                         name="name" value="{{ old('name') }}" placeholder="نام" required
-                                        autocomplete="email" autofocus>
+                                        autocomplete="name" autofocus>
                                     @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control @error('family') is-invalid @enderror"
+                                        name="family" value="{{ old('family') }}" placeholder="نام خانوادگی" required
+                                        autocomplete="family" >
+                                    @error('family')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control @error('father_name') is-invalid @enderror"
+                                        name="father_name" value="{{ old('father_name') }}" placeholder="نام پدر" required
+                                        autocomplete="father_name" >
+                                    @error('father_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="number" class="form-control @error('nationalCode') is-invalid @enderror"
+                                        name="nationalCode" value="{{ old('nationalCode') }}" placeholder="کد ملی" required
+                                        autocomplete="nationalCode" >
+                                    @error('nationalCode')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="number" class="form-control @error('mobile') is-invalid @enderror"
+                                        name="mobile" value="{{ old('mobile') }}" placeholder="شماره همراه ولی" required
+                                        autocomplete="mobile" >
+                                    @error('mobile')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -36,7 +84,7 @@
                                 <div class="form-group">
                                     <input type="email" class="form-control @error('email') is-invalid @enderror"
                                         name="email" value="{{ old('email') }}" placeholder="ایمیل" required
-                                        autocomplete="email" autofocus>
+                                        autocomplete="email" >
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,8 +95,8 @@
 
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <input type="password" class="form-control @error('password') is-invalid @enderror"
-                                        placeholder="رمز عبور" required autocomplete="current-password">
+                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
+                                        placeholder="رمز عبور" required autocomplete="new-password">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -59,8 +107,7 @@
 
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <input type="password" name="password_confirmation"
-                                        class="form-control @error('password') is-invalid @enderror"
+                                    <input type="password" name="password_confirmation"  class="form-control"
                                         placeholder="تکرار رمز عبور " required autocomplete="current-password">
 
                                 </div>
