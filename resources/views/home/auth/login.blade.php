@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home.auth.layouts.app')
 
 @section('content')
 
@@ -35,7 +35,7 @@
 
 							<div class="col-lg-12">
 								<div class="form-group">
-									<input type="password" class="form-control @error('password') is-invalid @enderror"
+									<input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
 										placeholder="رمز عبور" required autocomplete="current-password">
 									@error('password')
 									<span class="invalid-feedback" role="alert">

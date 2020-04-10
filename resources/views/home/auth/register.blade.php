@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('home.auth.layouts.app')
 
 @section('content')
 
@@ -22,17 +22,17 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                        name="name" value="{{ old('name') }}" placeholder="نام" required
-                                        autocomplete="name" autofocus>
-                                    @error('name')
+                                    <input type="text" class="form-control @error('user_name') is-invalid @enderror"
+                                        name="user_name" value="{{ old('user_name') }}" placeholder="نام کاربری" required
+                                        autocomplete="user_name" autofocus>
+                                    @error('user_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-lg-12">
+                            {{-- <div class="col-lg-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control @error('family') is-invalid @enderror"
                                         name="family" value="{{ old('family') }}" placeholder="نام خانوادگی" required
@@ -79,7 +79,7 @@
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <input type="email" class="form-control @error('email') is-invalid @enderror"

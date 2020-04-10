@@ -51,11 +51,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'family' => ['required', 'string', 'max:255'],
-            'father_name' => ['required', 'string', 'max:255'],
-            'nationalCode' => ['required', new Nationalcode],
-            'mobile' => ['required','regex:/09(0[1-2]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}/u'],
+            'user_name' => ['required', 'string', 'max:255','unique:users'],
+            // 'name' => ['required', 'string', 'max:255'],
+            // 'family' => ['required', 'string', 'max:255'],
+            // 'father_name' => ['required', 'string', 'max:255'],
+            // 'about' => ['required', 'string', 'max:255'],
+            // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
+            // 'nationalCode' => ['required', new Nationalcode],
+            // 'mobile' => ['required','regex:/09(0[1-2]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}/u'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -70,11 +73,14 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'family' => $data['family'],
-            'father_name' => $data['father_name'],
-            'nationalCode' => $data['nationalCode'],
-            'mobile' => $data['mobile'],
+            'user_name' => $data['user_name'],
+            // 'name' => $data['name'],
+            // 'family' => $data['family'],
+            // 'father_name' => $data['father_name'],
+            // 'about' => $data['about'],
+            // 'profile_image' => $data['profile_image'],
+            // 'nationalCode' => $data['nationalCode'],
+            // 'mobile' => $data['mobile'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
