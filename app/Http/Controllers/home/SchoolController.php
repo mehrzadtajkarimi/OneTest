@@ -1,9 +1,11 @@
 <?php
+namespace App\Http\Controllers\home;
 
-namespace App\Http\Controllers;
+
 
 use App\School;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class SchoolController extends Controller
 {
