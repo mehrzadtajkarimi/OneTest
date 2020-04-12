@@ -1,4 +1,4 @@
-@extends('home.auth.layouts.app')
+@extends('home.user.layouts.app')
 
 @section('content')
 
@@ -32,54 +32,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            {{-- <div class="col-lg-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control @error('family') is-invalid @enderror"
-                                        name="family" value="{{ old('family') }}" placeholder="نام خانوادگی" required
-                                        autocomplete="family" >
-                                    @error('family')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control @error('father_name') is-invalid @enderror"
-                                        name="father_name" value="{{ old('father_name') }}" placeholder="نام پدر" required
-                                        autocomplete="father_name" >
-                                    @error('father_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <input type="number" class="form-control @error('nationalCode') is-invalid @enderror"
-                                        name="nationalCode" value="{{ old('nationalCode') }}" placeholder="کد ملی" required
-                                        autocomplete="nationalCode" >
-                                    @error('nationalCode')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <input type="number" class="form-control @error('mobile') is-invalid @enderror"
-                                        name="mobile" value="{{ old('mobile') }}" placeholder="شماره همراه ولی" required
-                                        autocomplete="mobile" >
-                                    @error('mobile')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div> --}}
+
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <input type="email" class="form-control @error('email') is-invalid @enderror"

@@ -12,9 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home.index');
 });
 
 Auth::routes();
-
-Route::get('/home', 'home\HomeController@index')->name('home');
+Route::resource('user', 'Home\User\UserController')->only('index','edit','update');
