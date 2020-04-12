@@ -11,3 +11,8 @@
 |
 */
 
+Route::get('/admin', function () {
+
+    // dd(auth()->user());
+        return view('admin.index');
+    });

@@ -18,8 +18,8 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        return view('home.user.index');
+        $user = auth()->user();
+        return view('home.user.index', compact('user'));
     }
 
     // /**
@@ -75,16 +75,9 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-
-       $data=$this->validator($request);
-
-        if ($user->save($data)) {
-            # code...
-            return redirect()->route('user.index');
-        }
-        return 'no';
-
-
+        $this->validator($request);
+        $user->update($request->all());
+        return redirect()->route('user.index');
     }
 
     // /**

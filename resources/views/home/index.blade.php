@@ -8,27 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap Min CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="home/css/bootstrap.min.css">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="home/css/animate.css">
     <!-- IcoFont Min CSS -->
-    <link rel="stylesheet" href="assets/css/icofont.min.css">
+    <link rel="stylesheet" href="home/css/icofont.min.css">
     <!-- Meanmenu Min CSS -->
-    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="home/css/meanmenu.css">
     <!-- Magnific Popup Min CSS -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="home/css/magnific-popup.min.css">
     <!-- Owl Carousel Min CSS -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="home/css/owl.carousel.min.css">
     <!-- NiceSelect Min CSS -->
-    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="home/css/nice-select.css">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="home/css/style.css">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="home/css/responsive.css">
 
     <title>کراک - SaaS صفحه لندینگ</title>
 
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="home/img/favicon.png">
 </head>
 
 <body>
@@ -42,14 +42,14 @@
     <header id="header">
         <div class="crake-mobile-nav">
             <div class="logo">
-                <img src="assets/img/logo.png" alt="">
+                <img src="home/img/logo.png" alt="">
             </div>
         </div>
 
         <div class="crake-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img src="home/img/logo.png" alt="logo"></a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarپشتیبانیedContent">
                         <ul class="navbar-nav nav ml-auto">
                             @if (Route::has('login'))
@@ -83,32 +83,32 @@
                     <div class="row h-100 justify-content-center align-items-center">
                         <div class="col-lg-6 col-md-12">
                             <div class="saas-image">
-                                <img src="assets/img/saas-shape/arrow.png" class="wow fadeInDown" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/arrow.png" class="wow fadeInDown" data-wow-delay="0.6s"
                                     alt="arrow">
-                                <img src="assets/img/saas-shape/box1.png" class="wow fadeInUp" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/box1.png" class="wow fadeInUp" data-wow-delay="0.6s"
                                     alt="box1">
-                                <img src="assets/img/saas-shape/boy1.png" class="wow fadeInLeft" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/boy1.png" class="wow fadeInLeft" data-wow-delay="0.6s"
                                     alt="boy1">
-                                <img src="assets/img/saas-shape/boy2.png" class="wow zoomIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/boy2.png" class="wow zoomIn" data-wow-delay="0.6s"
                                     alt="boy2">
-                                <img src="assets/img/saas-shape/boy3.png" class="wow bounceIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/boy3.png" class="wow bounceIn" data-wow-delay="0.6s"
                                     alt="boy3">
-                                <img src="assets/img/saas-shape/digital-screen.png" class="wow fadeInDown"
+                                <img src="home/img/saas-shape/digital-screen.png" class="wow fadeInDown"
                                     data-wow-delay="0.6s" alt="digital-screen">
-                                <img src="assets/img/saas-shape/filter1.png" class="wow zoomIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/filter1.png" class="wow zoomIn" data-wow-delay="0.6s"
                                     alt="filter1">
-                                <img src="assets/img/saas-shape/filter2.png" class="wow fadeInUp" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/filter2.png" class="wow fadeInUp" data-wow-delay="0.6s"
                                     alt="filter2">
-                                <img src="assets/img/saas-shape/filter3.png" class="wow rotateIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/filter3.png" class="wow rotateIn" data-wow-delay="0.6s"
                                     alt="filter3">
-                                <img src="assets/img/saas-shape/girl1.png" class="wow fadeInUp" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/girl1.png" class="wow fadeInUp" data-wow-delay="0.6s"
                                     alt="girl1">
-                                <img src="assets/img/saas-shape/girl2.png" class="wow zoomIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/girl2.png" class="wow zoomIn" data-wow-delay="0.6s"
                                     alt="girl2">
-                                <img src="assets/img/saas-shape/monitor.png" class="wow zoomIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/monitor.png" class="wow zoomIn" data-wow-delay="0.6s"
                                     alt="monitor">
 
-                                <img src="assets/img/saas-shape/main-image.png" class="wow zoomIn" data-wow-delay="0.6s"
+                                <img src="home/img/saas-shape/main-image.png" class="wow zoomIn" data-wow-delay="0.6s"
                                     alt="main-image.png">
                             </div>
                         </div>
@@ -130,10 +130,10 @@
         </div>
 
         <div class="bg-gray shape-1"></div>
-        <div class="shape1"><img src="assets/img/shape1.png" alt="img"></div>
-        <div class="shape2"><img src="assets/img/shape2.png" alt="img"></div>
-        <div class="shape3"><img src="assets/img/shape3.png" alt="img"></div>
-        <div class="shape4 rotateme"><img src="assets/img/shape4.png" alt="img"></div>
+        <div class="shape1"><img src="home/img/shape1.png" alt="img"></div>
+        <div class="shape2"><img src="home/img/shape2.png" alt="img"></div>
+        <div class="shape3"><img src="home/img/shape3.png" alt="img"></div>
+        <div class="shape4 rotateme"><img src="home/img/shape4.png" alt="img"></div>
     </div>
     <!-- End SaaS Main Banner -->
 
@@ -143,7 +143,7 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="join-img">
-                        <img src="assets/img/3.png" alt="img">
+                        <img src="home/img/3.png" alt="img">
                     </div>
                 </div>
 
@@ -199,7 +199,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-footer-widget">
-                        <a href="#" class="logo"><img src="assets/img/logo2.png" alt="logo2"></a>
+                        <a href="#" class="logo"><img src="home/img/logo2.png" alt="logo2"></a>
                         <p>برنامه روزانه، هفته یا ماه را پیش ببرید و وضعیت پروژه را در یک نگاه ببینید. جستجو و فیلتر
                             برای تمرکز بر
                             روی هر چیزی یک پروژه واحد فردی.</p>
@@ -282,37 +282,37 @@
     <!-- End Back Top top -->
 
     <!-- Jquery Min JS -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="home/js/jquery.min.js"></script>
     <!-- Popper Min JS -->
-    <script src="assets/js/popper.min.js"></script>
+    <script src="home/js/popper.min.js"></script>
     <!-- Bootstrap Min JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="home/js/bootstrap.min.js"></script>
     <!-- Canvas Min JS -->
-    <script src="assets/js/canvas.min.js"></script>
+    <script src="home/js/canvas.min.js"></script>
     <!-- Meanmenu Min JS -->
-    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="home/js/jquery.meanmenu.min.js"></script>
     <!-- WOW Min JS -->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="home/js/wow.min.js"></script>
     <!-- Tilt Min JS -->
-    <script src="assets/js/tilt.jquery.min.js"></script>
+    <script src="home/js/tilt.jquery.min.js"></script>
     <!-- Magnific Popup Min JS -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="home/js/jquery.magnific-popup.min.js"></script>
     <!-- Owl Carousel Min JS -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="home/js/owl.carousel.min.js"></script>
     <!-- Waypoints Min Js -->
-    <script src="assets/js/waypoints.min.js"></script>
+    <script src="home/js/waypoints.min.js"></script>
     <!-- Jquery CounterUp Min JS -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="home/js/jquery.counterup.min.js"></script>
     <!-- NiceSelect Min Js -->
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="home/js/jquery.nice-select.min.js"></script>
     <!-- ajaxChimp Min JS -->
-    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="home/js/jquery.ajaxchimp.min.js"></script>
     <!-- Form Validator Min JS -->
-    <script src="assets/js/form-validator.min.js"></script>
+    <script src="home/js/form-validator.min.js"></script>
     <!-- Contact Form Min JS -->
-    <script src="assets/js/contact-form-script.js"></script>
+    <script src="home/js/contact-form-script.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="home/js/main.js"></script>
 </body>
 
 </html>

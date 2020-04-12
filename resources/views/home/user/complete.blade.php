@@ -5,7 +5,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-transparent">
-            <li class="breadcrumb-item"><a href="{{ url('/') }}">خانه</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('user.index') }}">خانه</a></li>
             <li class="breadcrumb-item active" aria-current="page"> پروفایل</li>
         </ol>
     </nav>
@@ -50,7 +50,7 @@
                                             <div class="form-group">
                                                 <input type="text"
                                                     class="form-control @error('name') is-invalid @enderror" name="name"
-                                                    value="{{ old('name')? $user->name :'' }}" placeholder="نام" required
+                                                    value="{{ old('name')?? $user->name }}" placeholder="نام" required
                                                     autocomplete="name">
                                                 @error('name')
                                                 <span class="invalid-feedback" role="alert">
@@ -64,7 +64,7 @@
                                             <div class="form-group">
                                                 <input type="text"
                                                     class="form-control @error('family') is-invalid @enderror"
-                                                    name="family" value="{{ old('family') ? $user->family :''}}"
+                                                    name="family" value="{{ old('family') ?? $user->family}}"
                                                     placeholder="نام خانوادگی" required autocomplete="family">
                                                 @error('family')
                                                 <span class="invalid-feedback" role="alert">
@@ -78,7 +78,7 @@
                                             <div class="form-group">
                                                 <input type="text"
                                                     class="form-control @error('father_name') is-invalid @enderror"
-                                                    name="father_name" value="{{ old('father_name')?$user->fader_name:'' }}"
+                                                    name="father_name" value="{{ old('father_name')?? $user->father_name }}"
                                                     placeholder="نام پدر" required autocomplete="father_name">
                                                 @error('father_name')
                                                 <span class="invalid-feedback" role="alert">
@@ -92,7 +92,7 @@
                                             <div class="form-group">
                                                 <input type="number"
                                                     class="form-control @error('nationalCode') is-invalid @enderror"
-                                                    name="nationalCode" value="{{ old('nationalCode')? $user->nationalCode :'' }}"
+                                                    name="nationalCode" value="{{ old('nationalCode')?? $user->nationalCode }}"
                                                     placeholder="کد ملی" required autocomplete="nationalCode">
                                                 @error('nationalCode')
                                                 <span class="invalid-feedback" role="alert">
@@ -106,7 +106,7 @@
                                             <div class="form-group">
                                                 <input type="number"
                                                     class="form-control @error('mobile') is-invalid @enderror"
-                                                    name="mobile" value="{{ old('mobile')? $user->mobile :''  }}"
+                                                    name="mobile" value="{{ old('mobile')?? $user->mobile  }}"
                                                     placeholder="شماره همراه ولی" required autocomplete="mobile">
                                                 @error('mobile')
                                                 <span class="invalid-feedback" role="alert">
@@ -118,7 +118,7 @@
 
                                         <div class="col-lg-12">
                                             <div class="form-group">
-                                                <textarea name="about" cols="30" rows="5" class="form-control "value="{{ old('about')? $user->about :''  }}"
+                                                <textarea name="about" cols="30" rows="5" class="form-control "value="{{ old('about')?? $user->about}}"
                                                     placeholder="درباره خودتون چیزی بنویسید"></textarea>
                                             </div>
                                         </div>

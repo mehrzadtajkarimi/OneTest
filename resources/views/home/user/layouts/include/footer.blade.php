@@ -1,2 +1,2 @@
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="home/js/main.js"></script>

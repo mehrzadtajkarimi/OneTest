@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6">
-                                <a href="{{ route('user.edit',3,'edit') }}" class="single-features text-dark card-link">
+                                <a href="{{ route('user.edit',$user->id,'edit') }}" class="single-features text-dark card-link">
                                     <div class="icon">
                                         <i class="icofont-heart-eyes"></i>
                                     </div>
@@ -83,14 +83,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shape7"><img src="assets/img/shape7.png" alt="shape"></div>
-                    <div class="shape3"><img src="assets/img/shape3.png" alt="img"></div>
+                    <div class="shape7"><img src="home/img/shape7.png" alt="shape"></div>
+                    <div class="shape3"><img src="home/img/shape3.png" alt="img"></div>
                     <div class="bg-gray shape-1"></div>
-                    <div class="shape6"><img src="assets/img/shape6.png" alt="img"></div>
-                    <div class="shape8 rotateme"><img src="assets/img/shape8.svg" alt="shape"></div>
-                    <div class="shape9"><img src="assets/img/shape9.svg" alt="shape"></div>
-                    <div class="shape10"><img src="assets/img/shape10.svg" alt="shape"></div>
-                    <div class="shape11 rotateme"><img src="assets/img/shape11.svg" alt="shape"></div>
+                    <div class="shape6"><img src="home/img/shape6.png" alt="img"></div>
+                    <div class="shape8 rotateme"><img src="home/img/shape8.svg" alt="shape"></div>
+                    <div class="shape9"><img src="home/img/shape9.svg" alt="shape"></div>
+                    <div class="shape10"><img src="home/img/shape10.svg" alt="shape"></div>
+                    <div class="shape11 rotateme"><img src="home/img/shape11.svg" alt="shape"></div>
                 </section>
                 <!-- End Features Area -->
             </div>
@@ -99,3 +99,4 @@
 </div>
 
 @endsection
+
