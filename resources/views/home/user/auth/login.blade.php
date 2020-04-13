@@ -10,7 +10,7 @@
 		<div class="row h-100 justify-content-center align-items-center">
 			<div class="col-lg-6 col-md-12">
 				<div class="login-image ">
-					<img class="img-fluid" src="assets/img/marketing.png" alt="image">
+					<img class="img-fluid" src="home/img/marketing.png" alt="image">
 				</div>
 			</div>
 
