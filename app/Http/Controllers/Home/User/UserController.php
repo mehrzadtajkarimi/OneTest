@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Home\User;
 
 use App\User;
 use Illuminate\Http\Request;
-use App\Traits\home\UpdateUser;
+use App\Traits\home\ValidateUser;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-    use UpdateUser;
+    use ValidateUser;
     /**
      * Display a listing of the resource.
      *

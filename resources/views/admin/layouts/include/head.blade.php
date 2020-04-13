@@ -8,6 +8,7 @@
 <!-- Google Font: Source Sans Pro -->
 <!-- Font Awesome -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
 <!-- iCheck -->
 <link rel="stylesheet" href="/plugins/iCheck/flat/blue.css">
@@ -21,6 +22,7 @@
 <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker-bs3.css">
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
 
 
 

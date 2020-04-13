@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Traits\home;
+namespace App\Traits;
 
 use App\User;
 use App\Rules\Nationalcode;
 use Illuminate\Support\Facades\Validator;
 
-trait UpdateUser
+trait ValidateUser
 {
     protected function validator($request)
     {
-       $request->validate([
+        $request->validate([
             'name' => ['required', 'string', 'max:255', 'min:3'],
             'family' => ['required', 'string', 'max:255', 'min:3'],
             'father_name' => ['required', 'string', 'max:255', 'min:3'],
@@ -19,7 +19,5 @@ trait UpdateUser
             'mobile' => ['required', 'regex:/09(0[1-2]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}/u'],
             // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
         ]);
-
     }
-
 }

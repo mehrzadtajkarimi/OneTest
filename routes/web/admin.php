@@ -13,5 +13,7 @@
 
 Route::get('/admin', function () {
     // dd(auth()->user());
-        return view('admin.index');
-    });
+    return view('admin.index');
+});
+
+Route::resource('users', 'UserController');
