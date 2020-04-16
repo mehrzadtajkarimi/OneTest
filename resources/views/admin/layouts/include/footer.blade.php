@@ -30,7 +30,7 @@
 <!-- FastClick -->
 <script src="/plugins/fastclick/fastclick.js"></script>
 
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- AdminLTE App -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- AdminLTE for demo purposes -->

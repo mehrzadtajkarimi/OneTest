@@ -32,6 +32,8 @@
     <footer class="main-footer">
         @include('admin.layouts.include.footer')
     </footer>
+    @include('sweet::alert')
 </body>
 
 </html>
+

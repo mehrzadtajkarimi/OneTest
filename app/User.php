@@ -44,4 +44,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+//ذخیره همه پسورد ها به هش
+    public function setPasswordAttribute($value)
+    {
+      $this->attributes['password']=bcrypt($value);
+    }
 }

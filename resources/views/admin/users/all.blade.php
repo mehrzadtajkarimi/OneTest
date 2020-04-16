@@ -12,14 +12,17 @@
             <h3 class="card-title">جدول ریسپانسیو</h3>
 
             <div class="card-tools d-flex">
+                <form action="">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="جستجو">
+                        <input type="text" name="search" class="form-control float-right" placeholder="جستجو" value="{{ request('search') }}">
 
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
                     </div>
-                </div>
-<a class="btn btn-primary btn-sm mr-3"role="button" href="{{ route('admin.users.create') }}"> ایجاد کاربر جدید</a>
+                </form>
+                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.users.create') }}"> ایجاد
+                    کاربر جدید</a>
             </div>
         </div>
         <!-- /.card-header -->
@@ -46,9 +49,14 @@
                         @endempty
 
                         <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</td>
-                        <td>
-                            <a name="" id="" class="btn btn-danger btn-sm" href="{{ route('admin.users.destroy',$user->id) }}" role="button">حذف</a>
-                            <a name="" id="" class="btn btn-primary btn-sm" href="#" role="button">ویرایش</a>
+                        <td class="d-flex">
+                            <form action="{{ route('admin.users.destroy',$user->id) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger btn-sm ml-2">خروج</button>
+                            </form>
+                            <a name="" id="" class="btn btn-primary btn-sm"
+                                href="{{ route('admin.users.edit',$user->id,'edit') }}" role="button">ویرایش</a>
                         </td>
 
                     </tr>
@@ -56,7 +64,12 @@
                 </tbody>
             </table>
         </div>
+        <div class="card-footer">
+            {{ $users->render() }}
+        </div>
+    </div>
+</div>
 
 
 
-        @endcomponent
+@endcomponent

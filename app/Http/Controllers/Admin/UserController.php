@@ -19,7 +19,15 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(15);
+        $users_query = User::query();
+        if ($keyword = request('search')) {
+            $users_query
+            ->where('name', 'LIKE', "%{$keyword}%")
+            ->orWhere('family','LIKE', "%{$keyword}%");
+        }
+
+
+       $users=  $users_query->paginate(15);
         return view('admin.users.all', compact('users'));
     }
 
@@ -30,7 +38,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users/insert');
+        return view('admin.users.create');
     }
 
     /**
@@ -54,7 +62,7 @@ class UserController extends Controller
             // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
         ]);
         User::create($data);
-
+        alert()->success('کاربر مورد نظر با موفقیت اضافه شد', 'موفقیت آمیز بود');
         return redirect()->route('admin.users.index');
     }
 
@@ -77,7 +85,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
@@ -89,7 +97,26 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $data = $request->validate([
+            'email' => ['required', 'email:rfc,dns'],
+            'user_name' => ['required', 'string', 'max:255', 'min:3'],
+            'name' => ['required', 'string', 'max:255', 'min:3'],
+            'family' => ['required', 'string', 'max:255', 'min:3'],
+            'father_name' => ['required', 'string', 'max:255', 'min:3'],
+            'about' => ['nullable', 'string', 'max:512'],
+            'nationalCode' => ['required', new Nationalcode],
+            'mobile' => ['required', 'regex:/09(0[1-2]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}/u'],
+            'password' => ['required', 'min:8', 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%@]).*$/']
+            // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
+        ]);
+        try {
+            $user->update($data);
+        } catch (\Exception $th) {
+
+            alert()->error('مشکلی رخ داده است', 'موفقیت آمیز نبود: کد ملی رو چک کنید')->persistent("متوجه شدم");
+            return back();
+        }
+        return redirect()->route('admin.users.index');
     }
 
     /**
@@ -100,6 +127,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        return 'ddd';
+        $user->delete($user);
+        return back();
     }
 }
