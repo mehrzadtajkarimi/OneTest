@@ -1,13 +1,12 @@
 <?php
-namespace App\Http\Controllers\home;
 
+namespace App\Http\Controllers\Admin;
 
-
-use App\School;
+use App\Model\Reply;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class SchoolController extends Controller
+class ReplyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -43,10 +42,10 @@ class SchoolController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\School  $school
+     * @param  \App\Model\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function show(School $school)
+    public function show(Reply $reply)
     {
         //
     }
@@ -54,10 +53,10 @@ class SchoolController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\School  $school
+     * @param  \App\Model\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function edit(School $school)
+    public function edit(Reply $reply)
     {
         //
     }
@@ -66,10 +65,10 @@ class SchoolController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\School  $school
+     * @param  \App\Model\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, School $school)
+    public function update(Request $request, Reply $reply)
     {
         //
     }
@@ -77,10 +76,10 @@ class SchoolController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\School  $school
+     * @param  \App\Model\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function destroy(School $school)
+    public function destroy(Reply $reply)
     {
         //
     }

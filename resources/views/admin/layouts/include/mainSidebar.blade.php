@@ -12,11 +12,11 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="https://www.gravatar.com/avatar/52f0fbcbedee04a121cba8dad1174462?s=200&d=mm&r=g"
+                    <img src="https://s.gravatar.com/avatar/10c81071acd325b893097509735f6828?s=200&d=mm&r=g"
                         class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">حسام موسوی</a>
+                    <a href="#" class="d-block">مهرزاد تاج کریمی</a>
                 </div>
             </div>
 
@@ -51,6 +51,30 @@
                                 <a href="#" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>سطح دسترسی</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-treeview {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'],'menu-open')}}">
+                        <a href="#" class="nav-link {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
+                            <i class="nav-icon fa fa-users"></i>
+                            <p>
+                                آزمونها
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.tests.index') }}" class="nav-link  {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>لیست آزمونها</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>طرح سوالات</p>
                                 </a>
                             </li>
                         </ul>

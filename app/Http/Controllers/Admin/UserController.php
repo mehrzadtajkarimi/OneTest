@@ -58,7 +58,7 @@ class UserController extends Controller
             'about' => ['nullable', 'string', 'max:512'],
             'nationalCode' => ['required', new Nationalcode],
             'mobile' => ['required', 'regex:/09(0[1-2]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}/u'],
-            'password' => ['required', 'min:8', 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%@]).*$/']
+            'password' => ['required', 'min:8']
             // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
         ]);
         User::create($data);
@@ -66,16 +66,16 @@ class UserController extends Controller
         return redirect()->route('admin.users.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
-    }
+    // /**
+    //  * Display the specified resource.
+    //  *
+    //  * @param  \App\User  $user
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function show(User $user)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -106,7 +106,7 @@ class UserController extends Controller
             'about' => ['nullable', 'string', 'max:512'],
             'nationalCode' => ['required', new Nationalcode],
             'mobile' => ['required', 'regex:/09(0[1-2]|1[0-9]|3[0-9]|2[0-1])-?[0-9]{3}-?[0-9]{4}/u'],
-            'password' => ['required', 'min:8', 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%@]).*$/']
+            'password' => ['required', 'min:8']
             // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
         ]);
         try {

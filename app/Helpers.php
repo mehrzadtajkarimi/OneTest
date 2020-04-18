@@ -13,7 +13,4 @@ if (!function_exists('is_active')) {
         }
         return Route::currentRouteName() == $routeName ? $activeClassName : '';
     }
-
-
-
 }

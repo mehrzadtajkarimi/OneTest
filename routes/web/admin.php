@@ -16,4 +16,6 @@ Route::get('/', function () {
     return view('admin.index');
 });
 
-Route::resource('users', 'UserController');
+Route::resource('users', 'UserController')->except('show');
+Route::resource('tests', 'TestController');
+Route::resource('question', 'QuestionController');
