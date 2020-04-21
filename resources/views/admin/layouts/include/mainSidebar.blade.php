@@ -58,7 +58,7 @@
 
                     <li class="nav-item has-treeview {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'],'menu-open')}}">
                         <a href="#" class="nav-link {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
-                            <i class="nav-icon fa fa-users"></i>
+                            <i class="nav-icon fa fa-book"></i>
                             <p>
                                 آزمونها
                                 <i class="right fa fa-angle-left"></i>
@@ -71,10 +71,22 @@
                                     <p>لیست آزمونها</p>
                                 </a>
                             </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-treeview {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'],'menu-open')}}">
+                        <a href="#" class="nav-link {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
+                            <i class="nav-icon fa fa-book"></i>
+                            <p>
+                                سوالات
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{ route('admin.tests.index') }}" class="nav-link  {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
                                     <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>طرح سوالات</p>
+                                    <p>لیست سوالات</p>
                                 </a>
                             </li>
                         </ul>

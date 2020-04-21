@@ -16,12 +16,9 @@ class CreateTestsTable extends Migration
         Schema::create('tests', function (Blueprint $table) {
             $table->id();
             $table->unsignedMediumInteger('user_id');
-            $table->unsignedInteger('lesson')->default(0);
-            $table->unsignedTinyInteger('class')->default(0);
-            $table->unsignedTinyInteger('grade')->default(0);
-            $table->unsignedSmallInteger('school')->default(0);
-            $table->unsignedTinyInteger('region')->default(0);
-            $table->smallInteger('time');
+            $table->string('lesson');
+            $table->integer('start_at');
+            $table->integer('finish_at');
             $table->timestamps();
         });
     }

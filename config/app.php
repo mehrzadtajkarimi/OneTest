@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Hekmatinasser\Verta\VertaServiceProvider::class,
 
     ],
 
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Verta' => Hekmatinasser\Verta\Verta::class,
 
     ],
 

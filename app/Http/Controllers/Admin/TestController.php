@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Model\Test;
 use Illuminate\Http\Request;
+use Hekmatinasser\Verta\Verta;
 use App\Http\Controllers\Controller;
 
 class TestController extends Controller
@@ -21,9 +22,10 @@ class TestController extends Controller
             ->where('name', 'LIKE', "%{$keyword}%")
             ->orWhere('family','LIKE', "%{$keyword}%");
         }
-
-
-       $tests=  $users_query->paginate(15);
+        $tests=  $users_query->paginate(15);
+        Verta::setStringformat('%A %e %B H:i ');
+        // $start_at = verta($tests->start_at??null); //convert timestamp
+        // $finish_at = verta($tests->finish_at??null); //convert timestamp
         return view('admin.tests.all', compact('tests'));
     }
 
@@ -34,7 +36,18 @@ class TestController extends Controller
      */
     public function create()
     {
-        return view('admin.tests.create');
+
+        $test = Test::all()->last();
+        $verta = verta();
+
+        Verta::setStringformat('%A %e %B %Y  H:i  %P');
+        $test_at = Verta::createTimestamp($test->start_at??null); //convert timestamp
+        // $array_dateTime = explode('|', $test_at);
+        // $test_at_date = $array_dateTime[0];
+        // $test_at_time = $array_dateTime[1];
+
+        return view('admin.tests.create', compact('test', 'verta'));
+
 
     }
 
@@ -46,19 +59,22 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'region' => ['required'],
-            'school' => ['required'],
-            'grade' => ['required'],
-            'class' => ['required'],
-            'lesson' => ['required'],
-            'time' => ['required'],
 
-            // 'profile_image' => ['required', 'dimensions:min_width=500,max_width=1500'],
+        $data = $request->validate([
+            'lesson' => ['required'],
+            'start_at' => ['required'],
+            'finish_at' => ['required'],
+
         ]);
-        Test::create($data);
-        alert()->success('کاربر مورد نظر با موفقیت اضافه شد', 'موفقیت آمیز بود');
-        return redirect()->route('admin.users.index');
+        Test::create([
+            'lesson' => request('lesson'),
+            'start_at' => request('start_at'),
+            'finish_at' => request('finish_at'),
+            'user_id' => auth()->id()
+        ]);
+        alert()->success('آزمون با موفقیت اضافه شد', 'موفقیت آمیز بود');
+        return redirect()->route('admin.tests.index');
+
     }
 
     /**
