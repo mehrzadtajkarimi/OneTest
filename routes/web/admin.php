@@ -19,3 +19,4 @@ Route::get('/', function () {
 Route::resource('users', 'UserController')->except('show');
 Route::resource('tests', 'TestController');
 Route::resource('question', 'QuestionController');
+Route::resource('entities', 'EntityController');

@@ -74,9 +74,9 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item has-treeview {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'],'menu-open')}}">
-                        <a href="#" class="nav-link {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
-                            <i class="nav-icon fa fa-book"></i>
+                    <li class="nav-item has-treeview {{ is_active(['admin.question.index','admin.question.create','admin.question.edit'],'menu-open')}}">
+                        <a href="#" class="nav-link {{ is_active(['admin.question.index','admin.question.create','admin.question.edit'])}}">
+                            <i class="nav-icon fa fa-newspaper-o"></i>
                             <p>
                                 سوالات
                                 <i class="right fa fa-angle-left"></i>
@@ -84,9 +84,27 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('admin.tests.index') }}" class="nav-link  {{ is_active(['admin.tests.index','admin.tests.create','admin.tests.edit'])}}">
+                                <a href="{{ route('admin.question.index') }}" class="nav-link  {{ is_active(['admin.question.index','admin.question.create','admin.question.edit'])}}">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>لیست سوالات</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-treeview {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'],'menu-open')}}">
+                        <a href="#" class="nav-link {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'])}}">
+                            <i class="nav-icon fa fa-address-card"></i>
+                            <p>
+                                معرفی کلاس
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.entities.index') }}" class="nav-link  {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'])}}">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>لیست کلاسها</p>
                                 </a>
                             </li>
                         </ul>

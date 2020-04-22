@@ -19,32 +19,32 @@
                     <div class="col-md-6 col-lg-3 ">
                         <div class="form-group">
                             <label for="Select4">منطقه</label>
-                            <select class="form-control" id="Select4" name="region" disabled>
-                                <option value="9">منطقه 9</option>
+                            <select class="form-control" id="Select4" name="region" >
+                                <option value="{{ $entities->region }}">{{ $entities->region }}</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="form-group">
                             <label for="Select3">مدرسه</label>
-                            <select class="form-control" id="Select3" name="school" disabled>
-                                <option value="0">علی شریعتی</option>
+                            <select class="form-control" id="Select3" name="school" >
+                                <option value="{{ $entities->school }}">{{ $entities->school }}</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="form-group">
                             <label for="Select2">مقطع</label>
-                            <select class="form-control" id="Select2" name="grade" disabled>
-                                <option value="6">ششم</option>
+                            <select class="form-control" id="Select2" name="grade" >
+                                <option value="{{ $entities->grade }}">{{ $entities->grade }}</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="form-group">
                             <label for="Select1">کلاس</label>
-                            <select class="form-control" id="Select1" name="class" disabled>
-                                <option value="0">ششم همکاری</option>
+                            <select class="form-control" id="Select1" name="class" >
+                                <option value="{{ $entities->class }}">{{ $entities->class }}</option>
                             </select>
                         </div>
                     </div>

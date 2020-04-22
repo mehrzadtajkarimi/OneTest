@@ -6,6 +6,7 @@ use App\Model\Test;
 use Illuminate\Http\Request;
 use Hekmatinasser\Verta\Verta;
 use App\Http\Controllers\Controller;
+use App\Model\Entity;
 
 class TestController extends Controller
 {
@@ -16,16 +17,14 @@ class TestController extends Controller
      */
     public function index()
     {
-        $users_query = Test::query();
+        $test = Test::query();
         if ($keyword = request('search')) {
-            $users_query
+            $test
             ->where('name', 'LIKE', "%{$keyword}%")
             ->orWhere('family','LIKE', "%{$keyword}%");
         }
-        $tests=  $users_query->paginate(15);
+        $tests=  $test->paginate(15);
         Verta::setStringformat('%A %e %B H:i ');
-        // $start_at = verta($tests->start_at??null); //convert timestamp
-        // $finish_at = verta($tests->finish_at??null); //convert timestamp
         return view('admin.tests.all', compact('tests'));
     }
 
@@ -37,16 +36,10 @@ class TestController extends Controller
     public function create()
     {
 
-        $test = Test::all()->last();
+        $entities = Test::find(1);
         $verta = verta();
-
         Verta::setStringformat('%A %e %B %Y  H:i  %P');
-        $test_at = Verta::createTimestamp($test->start_at??null); //convert timestamp
-        // $array_dateTime = explode('|', $test_at);
-        // $test_at_date = $array_dateTime[0];
-        // $test_at_time = $array_dateTime[1];
-
-        return view('admin.tests.create', compact('test', 'verta'));
+        return view('admin.tests.create', compact('entities', 'verta'));
 
 
     }

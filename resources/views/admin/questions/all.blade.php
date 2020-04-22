@@ -1,28 +1,30 @@
-@component('admin.layouts.include.content' , ['title' => 'لیست آزمونها'])
+@component('admin.layouts.include.content' , ['title' => 'لیست سوالات'])
 
 @slot('breadcrumb')
 <li class="breadcrumb-item "><a href="{{ url('admin.panel') }}">پنل مدیریت</a></li>
-<li class="breadcrumb-item active">لیست آزمونها</li>
+<li class="breadcrumb-item active"><a href="{{ route('admin.question.index') }}">لیست سوالات جدید</a></li>
+<li class="breadcrumb-item active">سوال جدید</li>
 @endslot
 
 
 <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">جدول آزمونها</h3>
+            <h3 class="card-title">جدول سوالات</h3>
 
             <div class="card-tools d-flex">
                 <form action="">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                        <input type="text" name="search" class="form-control float-right" placeholder="جستجو" value="{{ request('search') }}">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="search" class="form-control float-right" placeholder="جستجو"
+                            value="{{ request('search') }}">
 
                         <div class="input-group-append">
                             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>
-                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.tests.create') }}"> ایجاد
-                    کاربر جدید</a>
+                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.question.create') }}"> ایجاد
+                    سوال جدید</a>
             </div>
         </div>
         <!-- /.card-header -->
@@ -31,31 +33,16 @@
                 <tbody>
                     <tr>
                         <th>ردیف</th>
-                        <th>منطقه</th>
-                        <th>مدرسه</th>
-                        <th>سال</th>
-                        <th>کلاس</th>
                         <th>نویسنده</th>
                         <th>نام درس</th>
-                        <th>زمان شروع</th>
-                        <th>زمان پایان</th>
-                        <th>وضعیت</th>
+                        <th>سوال</th>
                         <th>حذف و ویرایش</th>
                     </tr>
-                    @foreach ($tests as $test)
+                    {{-- @foreach ($tests as $test)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>نویسنده</td>
                         <td>{{ $test->lesson }}</td>
-                        <td>{{ verta($test->start_at)}}</td>
-                        <td>{{ verta($test->finish_at)}}</td>
-
-                        <td><span class="badge bg-danger">پایان یافته</span></td>
-
                         <td class="d-flex">
                             <form action="{{ route('admin.tests.destroy',$test->id) }}" method="post">
                                 @csrf
@@ -65,14 +52,13 @@
                             <a name="" id="" class="btn btn-primary btn-sm"
                                 href="{{ route('admin.tests.edit',$test->id,'edit') }}" role="button">ویرایش</a>
                         </td>
-
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                 </tbody>
             </table>
         </div>
         <div class="card-footer">
-            {{ $tests->render() }}
+            {{-- {{ $tests->render() }} --}}
         </div>
     </div>
 </div>

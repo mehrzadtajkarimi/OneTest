@@ -8,14 +8,15 @@ use App\Http\Controllers\Controller;
 
 class EntityController extends Controller
 {
-    /**
+/**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $entities=Entity::paginate(15);
+        return view('admin.entities.all',compact('entities'));
     }
 
     /**
@@ -25,7 +26,7 @@ class EntityController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.entities.create');
     }
 
     /**
@@ -36,7 +37,9 @@ class EntityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       Entity::create($request->all());
+       alert()->success('موفقیت آمیز بود');
+       return back();
     }
 
     /**

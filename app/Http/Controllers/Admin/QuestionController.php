@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Entity;
 use App\Model\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,7 +16,7 @@ class questionController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.questions.all');
     }
 
     /**
@@ -25,7 +26,11 @@ class questionController extends Controller
      */
     public function create()
     {
-        //
+    //    return Question::find(1);
+        $entities = Question::find(1);
+
+
+        return view('admin.questions.create',compact('entities'));
     }
 
     /**
@@ -36,7 +41,9 @@ class questionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Question::create($request->all());
+        alert()->success('سوال با موفقیت اضافه شد', 'موفقیت آمیز بود');
+        return back();
     }
 
     /**
