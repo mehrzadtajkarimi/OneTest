@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Test;
 use App\Model\Reply;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\Question;
 
 class ReplyController extends Controller
 {
@@ -15,7 +17,8 @@ class ReplyController extends Controller
      */
     public function index()
     {
-        //
+    //   $Questions=  Test::all();
+       return view('admin.reply.all');
     }
 
     /**
@@ -25,7 +28,10 @@ class ReplyController extends Controller
      */
     public function create()
     {
-        //
+
+        $questions=Question::find($_GET['id']);
+        $reply=Reply::where('question_id','=',$_GET['id'])->get();
+        return view('admin.reply.create',compact('questions','reply'));
     }
 
     /**
@@ -36,7 +42,9 @@ class ReplyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Reply::create($request->all());
+        return back();
     }
 
     /**
@@ -70,7 +78,11 @@ class ReplyController extends Controller
      */
     public function update(Request $request, Reply $reply)
     {
-        //
+
+       $status= Reply::find($request->radios);
+       $status->status=1;
+       $status->save();
+       return back();
     }
 
     /**

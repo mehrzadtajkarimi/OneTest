@@ -1,9 +1,8 @@
-@component('admin.layouts.include.content' , ['title' => 'لیست سوالات'])
+@component('admin.layouts.include.content' , ['title' => 'لیست پاسخ ها'])
 
 @slot('breadcrumb')
 <li class="breadcrumb-item "><a href="{{ url('admin.panel') }}">پنل مدیریت</a></li>
-<li class="breadcrumb-item active"><a href="{{ route('admin.question.index') }}">لیست سوالات جدید</a></li>
-<li class="breadcrumb-item active">سوال جدید</li>
+<li class="breadcrumb-item active">لیست پاسخ ها</li>
 @endslot
 
 
@@ -23,7 +22,7 @@
                         </div>
                     </div>
                 </form>
-                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.question.create') }}"> ایجاد
+                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.reply.create') }}"> ایجاد
                     سوال جدید</a>
             </div>
         </div>
@@ -37,8 +36,9 @@
                         <th>آزمون</th>
                         <th>سوال</th>
                         <th>نمره</th>
+                        <th>پاسخ</th>
                         <th>نمایش پاسخ</th>
-                        <th> حذف و ویرایش سوال</th>
+                        <th> حذف و ویرایش پاسخ</th>
                         <th> ایجاد و ویرایش پاسخ</th>
                     </tr>
                     @foreach ($Questions as $item)
@@ -65,7 +65,7 @@
                             <a name="" id="" class="btn btn-primary btn-sm"
                                 href="{{ route('admin.reply.edit',$item->id,'edit') }}" role="button">ویرایش</a>
                             <a name="" id="" class="btn btn-primary btn-sm"
-                                href="{{ route('admin.reply.create','id='.$item->id) }}" role="button">درج پاسخ</a>
+                                href="{{ route('admin.reply.create') }}" role="button">درج پاسخ</a>
                         </td>
                     </tr>
                     @endforeach

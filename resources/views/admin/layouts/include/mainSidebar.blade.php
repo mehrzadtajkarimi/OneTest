@@ -76,7 +76,7 @@
 
                     <li class="nav-item has-treeview {{ is_active(['admin.question.index','admin.question.create','admin.question.edit'],'menu-open')}}">
                         <a href="#" class="nav-link {{ is_active(['admin.question.index','admin.question.create','admin.question.edit'])}}">
-                            <i class="nav-icon fa fa-newspaper-o"></i>
+                            <i class="nav-icon fa fa-question"></i>
                             <p>
                                 سوالات
                                 <i class="right fa fa-angle-left"></i>
@@ -91,6 +91,24 @@
                             </li>
                         </ul>
                     </li>
+
+                    {{-- <li class="nav-item has-treeview {{ is_active(['admin.reply.index','admin.reply.create','admin.reply.edit'],'menu-open')}}">
+                        <a href="#" class="nav-link {{ is_active(['admin.reply.index','admin.reply.create','admin.reply.edit'])}}">
+                            <i class="nav-icon fa fa-list-ol"></i>
+                            <p>
+                                پاسخ ها
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.reply.index') }}" class="nav-link  {{ is_active(['admin.reply.index','admin.reply.create','admin.reply.edit'])}}">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>لیست پاسخ ها</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li> --}}
 
                     <li class="nav-item has-treeview {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'],'menu-open')}}">
                         <a href="#" class="nav-link {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'])}}">

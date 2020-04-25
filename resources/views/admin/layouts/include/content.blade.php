@@ -22,11 +22,7 @@
 <section class="content">
     <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-
-            {{ $slot }}
-
-        </div>
+               {{ $slot }}
         <!-- /.row -->
     </div><!-- /.container-fluid -->
 </section>
