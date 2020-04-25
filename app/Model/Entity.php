@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\Model\Test;
 use Illuminate\Database\Eloquent\Model;
 
 class Entity extends Model
@@ -13,6 +14,6 @@ class Entity extends Model
 
     public  function tests()
     {
-        return $this->hasMany('App\Model\Test');//تعداد زیادی آزمون وجود دارد
+        return $this->hasMany(Test::class);//تعداد زیادی آزمون وجود دارد
     }
 }

@@ -34,26 +34,41 @@
                     <tr>
                         <th>ردیف</th>
                         <th>نویسنده</th>
-                        <th>نام درس</th>
+                        <th>آزمون</th>
                         <th>سوال</th>
-                        <th>حذف و ویرایش</th>
+                        <th>نمره</th>
+                        <th>نمایش پاسخ</th>
+                        <th> حذف و ویرایش سوال</th>
+                        <th> ایجاد و ویرایش پاسخ</th>
                     </tr>
-                    {{-- @foreach ($tests as $test)
+                    @foreach ($Questions as $item)
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>نویسنده</td>
-                        <td>{{ $test->lesson }}</td>
+                        <td>{{ $item->tests->lesson }}</td>
+                        <td>{{ $item->question }}</td>
+                        <td>{{ $item->mark }}</td>
+                        <td>
+                            <a name="" id="" class="btn btn-primary btn-sm"
+                                href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">نمایش پاسخ ها</a>
+                        </td>
                         <td class="d-flex">
-                            <form action="{{ route('admin.tests.destroy',$test->id) }}" method="post">
+                            <form action="{{ route('admin.tests.destroy',$item->id) }}" method="post">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-danger btn-sm ml-2">خروج</button>
                             </form>
                             <a name="" id="" class="btn btn-primary btn-sm"
-                                href="{{ route('admin.tests.edit',$test->id,'edit') }}" role="button">ویرایش</a>
+                                href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">ویرایش</a>
+                        </td>
+                        <td>
+                            <a name="" id="" class="btn btn-primary btn-sm"
+                                href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">ویرایش</a>
+                            <a name="" id="" class="btn btn-primary btn-sm"
+                                href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">درج پاسخ</a>
                         </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
         </div>

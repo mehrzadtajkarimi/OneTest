@@ -1,0 +1,27 @@
+{
+  "name": "r-range-slider",
+  "version": "3.0.12",
+  "description": "all in one range slider, single range , double range , multi range",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  },
+  "keywords": ["slider","range","rangeslider","dragable"],
+  "author": "mohamad sharif feiz",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammadFeiz/r-slider.git"
+  }
+}

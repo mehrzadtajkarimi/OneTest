@@ -18,7 +18,7 @@ class CreateEntitiesTable extends Migration
             $table->string('region');
             $table->string('school');
             $table->string('grade');
-            $table->string('class');
+            $table->string('class')->unique();
             $table->timestamps();
         });
     }

@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\Model\Question;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
@@ -11,7 +12,7 @@ class Reply extends Model
 
     public function questions()
     {
-        return $this->belongsTo('App\Model\Question');//متعلق است به سوال
+        return $this->belongsTo(Question::class);//متعلق است به سوال
     }
 
 }

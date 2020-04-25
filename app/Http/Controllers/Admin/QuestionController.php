@@ -6,6 +6,7 @@ use App\Model\Entity;
 use App\Model\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\Test;
 
 class questionController extends Controller
 {
@@ -16,7 +17,11 @@ class questionController extends Controller
      */
     public function index()
     {
-        return view('admin.questions.all');
+        // $Questions = Question::all();
+        $Questions =Question::all();
+        // dd( $Questions);
+
+        return view('admin.questions.all', compact('Questions'));
     }
 
     /**
@@ -26,11 +31,9 @@ class questionController extends Controller
      */
     public function create()
     {
-    //    return Question::find(1);
-        $entities = Question::find(1);
-
-
-        return view('admin.questions.create',compact('entities'));
+        //    return Question::find(1);
+        $tests = Test::all();
+        return view('admin.questions.create', compact('tests'));
     }
 
     /**

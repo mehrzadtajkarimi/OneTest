@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Test;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -58,6 +59,6 @@ class User extends Authenticatable
 
     public function tests()
     {
-        return $this->hasMany('App\Model\Test');
+        return $this->hasMany(Test::class);
     }
 }

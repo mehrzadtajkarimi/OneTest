@@ -6,56 +6,56 @@
 <li class="breadcrumb-item active">سوال جدید</li>
 @endslot
 
-<div class="col-12">
+<div class="col-6 m-auto">
     <div class="card shadow">
         <!-- /.card-header -->
         <!-- form start -->
         <form class="form-horizontal" action="{{ route('admin.question.store') }}" method="POST">
             @csrf
-            <div class="card-body">
+            <div class="card-body p-4">
 
                 <div class="row">
-                    <div class="col-md-6 col-lg-3 ">
-                        <div class="form-group">
-                            <label for="Select4">منطقه</label>
-                            <select class="form-control" id="Select4" name="region" >
-                                <option value="{{ $entities->region??'' }}">{{ $entities->region??'' }}</option>
+                    <div class="col-md-6">
+                        <div class="form-group text-center">
+                            <label for="Select4">انتخاب آزمون</label>
+                            <select class="form-control" id="Select4" name="test_id">
+                                @foreach ($tests as $item)
+                                <option value="{{ $item->id??'' }}">{{ $item->lesson??'' }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="form-group">
-                            <label for="Select3">مدرسه</label>
-                            <select class="form-control" id="Select3" name="school" >
-                                <option value="{{ $entities->school??'' }}">{{ $entities->school??'' }}</option>
+                    <div class="col-md-6">
+                        <div class="form-group text-center">
+                            <label for="Input4">نمره</label>
+                            <select class="form-control " name="mark" id="Input4">
+                                <option value="0.5">0.5</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="form-group">
-                            <label for="Select2">مقطع</label>
-                            <select class="form-control" id="Select2" name="grade" >
-                                <option value="{{ $entities->grade??'' }}">{{ $entities->grade??'' }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="form-group">
-                            <label for="Select1">کلاس</label>
-                            <select class="form-control" id="Select1" name="class" >
-                                <option value="{{ $entities->class??'' }}">{{ $entities->class??'' }}</option>
-                            </select>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Input3">سوال</label>
-                            <input type="text" class="form-control" id="Input3" name="question" placeholder="">
+                            <textarea class="form-control" name="question" id="Input3" rows="3"
+                                placeholder="وارد کردن اطلاعات ..."></textarea>
                         </div>
                     </div>
+                </div>
+                <div class="row ">
+
                 </div>
 
             </div>
@@ -68,5 +68,7 @@
         </form>
     </div>
 </div>
+
+
 
 @endcomponent

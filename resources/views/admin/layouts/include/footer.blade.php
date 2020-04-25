@@ -31,6 +31,9 @@
 <!-- FastClick -->
 <script src="/plugins/fastclick/fastclick.js"></script>
 
+
+<script src="/plugins/ionslider/ion.rangeSlider.min.js"></script>
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!-- AdminLTE App -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -236,5 +239,21 @@
         "responsive": true
     });
 
+
+
+
+
+    $(".js-range-slider").ionRangeSlider({
+        skin: "round",
+        grid: true,
+        min: 0,
+        max: 100,
+        from: 21,
+        max_postfix: "+",
+        prefix: "Age: ",
+        postfix: " years"
+    });
+
 });
+
 </script>

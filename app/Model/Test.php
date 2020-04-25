@@ -2,6 +2,9 @@
 
 namespace App\Model;
 
+use App\User;
+use App\Model\Entity;
+use App\Model\Question;
 use Illuminate\Database\Eloquent\Model;
 
 class Test extends Model
@@ -12,14 +15,14 @@ class Test extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');//متعلق است به کاربر
+        return $this->belongsTo(User::class);//متعلق است به کاربر
     }
     public function entity()
     {
-        return $this->belongsTo('App\Model\Entity');// آزمون متعلق است به موجودیت
+        return $this->belongsTo(Entity::class);// آزمون متعلق است به موجودیت
     }
     public function questions()
     {
-        return $this->hasMany('App\Model\Question');//تعداد زیادی سوال وجود دارد
+        return $this->hasMany(Question::class);//تعداد زیادی سوال وجود دارد
     }
 }

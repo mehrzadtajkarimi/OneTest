@@ -2,7 +2,7 @@
 
 @slot('breadcrumb')
 <li class="breadcrumb-item "><a href="{{ url('admin.panel') }}">پنل مدیریت</a></li>
-<li class="breadcrumb-item "><a href="{{ route('admin.users.index') }}">لیست آزمونها</a></li>
+<li class="breadcrumb-item "><a href="{{ route('admin.tests.index') }}">لیست آزمونها</a></li>
 <li class="breadcrumb-item active">آزمون جدید</li>
 @endslot
 
@@ -10,73 +10,46 @@
 <div class="col-12">
     <div class="card shadow">
         <!-- /.card-header -->
+        <div class="card-header">
+            <h5>طراح آزمون : {{ auth()->user()->user_name }}</h5>
+        </div>
+
+
+
         <!-- form start -->
         <form class="form-horizontal" action="{{ route('admin.tests.store') }}" method="POST">
             @csrf
             <div class="card-body">
 
                 <div class="row">
-                    <div class="col-md-6 col-lg-3 ">
-                        <div class="form-group">
-                            <label for="Select4">منطقه</label>
-                            <select class="form-control" id="Select4" name="region" >
-                                <option value="{{ $entities->region }}">{{ $entities->region }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="form-group">
-                            <label for="Select3">مدرسه</label>
-                            <select class="form-control" id="Select3" name="school" >
-                                <option value="{{ $entities->school }}">{{ $entities->school }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="form-group">
-                            <label for="Select2">مقطع</label>
-                            <select class="form-control" id="Select2" name="grade" >
-                                <option value="{{ $entities->grade }}">{{ $entities->grade }}</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="Select1">کلاس</label>
-                            <select class="form-control" id="Select1" name="class" >
-                                <option value="{{ $entities->class }}">{{ $entities->class }}</option>
+                            <select class="form-control" id="Select1" name="entity_id">
+                                @foreach ($entity as $item)
+                                <option value="{{ $item->id  }}">{{ $item->class }}
+                                </option>
+                                @endforeach
                             </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Input1"> شروع</label>
+                            <input type="text" class="form-control start_at" id="Input1" required>
+                            <input type="hidden" id="start_at" name="start_at">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Input2"> پایان</label>
+                            <input type="text" class="form-control finish_at" id="Input2" required>
+                            <input type="hidden" id="finish_at" name="finish_at">
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="Input1"> شروع</label>
-                            <input type="text" class="form-control start_at  @error('start_at') is-invalid @enderror"
-                                placeholder="{{ $verta }}" id="Input1">
-                            <input type="hidden" id="start_at" name="start_at">
-                            @error('start_at')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="Input2"> پایان</label>
-                            <input type="text" class="form-control finish_at @error('finish_at') is-invalid @enderror"
-                                placeholder="{{ $verta }}" id="Input2">
-                            <input type="hidden" id="finish_at" name="finish_at">
-                            @error('finish_at')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                    </div>
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Input3">نام امتحان</label>
@@ -94,12 +67,6 @@
             <!-- /.card-footer -->
         </form>
     </div>
-
-
-
-
-
-
 </div>
 
 

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Test;
-use Illuminate\Http\Request;
-use Hekmatinasser\Verta\Verta;
 use App\Http\Controllers\Controller;
 use App\Model\Entity;
+use App\Model\Test;
+use Hekmatinasser\Verta\Verta;
+use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
@@ -20,10 +20,10 @@ class TestController extends Controller
         $test = Test::query();
         if ($keyword = request('search')) {
             $test
-            ->where('name', 'LIKE', "%{$keyword}%")
-            ->orWhere('family','LIKE', "%{$keyword}%");
+                ->where('name', 'LIKE', "%{$keyword}%")
+                ->orWhere('family', 'LIKE', "%{$keyword}%");
         }
-        $tests=  $test->paginate(15);
+        $tests = $test->paginate(15);
         Verta::setStringformat('%A %e %B H:i ');
         return view('admin.tests.all', compact('tests'));
     }
@@ -35,13 +35,8 @@ class TestController extends Controller
      */
     public function create()
     {
-
-        $entities = Test::find(1);
-        $verta = verta();
-        Verta::setStringformat('%A %e %B %Y  H:i  %P');
-        return view('admin.tests.create', compact('entities', 'verta'));
-
-
+        $entity = Entity::all();
+        return view('admin.tests.create', compact('entity'));
     }
 
     /**
@@ -52,22 +47,21 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-
-        $data = $request->validate([
+        $request->validate([
             'lesson' => ['required'],
             'start_at' => ['required'],
             'finish_at' => ['required'],
-
         ]);
         Test::create([
-            'lesson' => request('lesson'),
-            'start_at' => request('start_at'),
-            'finish_at' => request('finish_at'),
-            'user_id' => auth()->id()
+            'user_id' => auth()->id(),
+            'entity_id' => $request->entity_id,
+            'start_at' => $request->start_at,
+            'finish_at' => $request->finish_at,
+            'lesson' => $request->lesson,
+
         ]);
         alert()->success('آزمون با موفقیت اضافه شد', 'موفقیت آمیز بود');
         return redirect()->route('admin.tests.index');
-
     }
 
     /**
