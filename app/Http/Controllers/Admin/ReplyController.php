@@ -17,8 +17,8 @@ class ReplyController extends Controller
      */
     public function index()
     {
-    //   $Questions=  Test::all();
-       return view('admin.reply.all');
+        //   $Questions=  Test::all();
+        return view('admin.reply.all');
     }
 
     /**
@@ -29,9 +29,9 @@ class ReplyController extends Controller
     public function create()
     {
 
-        $questions=Question::find($_GET['id']);
-        $reply=Reply::where('question_id','=',$_GET['id'])->get();
-        return view('admin.reply.create',compact('questions','reply'));
+        $questions = Question::find($_GET['id']);
+        $reply = Reply::where('question_id', '=', $_GET['id'])->get();
+        return view('admin.reply.create', compact('questions', 'reply'));
     }
 
     /**
@@ -78,11 +78,10 @@ class ReplyController extends Controller
      */
     public function update(Request $request, Reply $reply)
     {
-
-       $status= Reply::find($request->radios);
-       $status->status=1;
-       $status->save();
-       return back();
+        $status = Reply::find($request->radios);
+        $status->status = 1;
+        $status->save();
+        return redirect()->route('admin.question.index');
     }
 
     /**
@@ -93,6 +92,7 @@ class ReplyController extends Controller
      */
     public function destroy(Reply $reply)
     {
-        //
+        $reply->delete();
+        return back();
     }
 }

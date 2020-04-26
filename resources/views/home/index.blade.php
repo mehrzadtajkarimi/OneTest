@@ -26,9 +26,9 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="home/css/responsive.css">
 
-    <title>کراک - SaaS صفحه لندینگ</title>
+    <title>Quiz</title>
 
-    <link rel="icon" type="image/png" href="home/img/favicon.png">
+    <link rel="icon" type="image/png" href="home/img/logo.png">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
         <div class="crake-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html"><img src="home/img/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img class="img-fluid w-75" src="home/img/logo.png" alt="logo"></a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarپشتیبانیedContent">
                         <ul class="navbar-nav nav ml-auto">
                             @if (Route::has('login'))

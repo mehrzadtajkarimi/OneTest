@@ -18,7 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->unsignedBigInteger('test_id');
             $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
             $table->string('question');
-            $table->tinyInteger('mark'); //نمره
+            $table->float('mark',2,2); //نمره
             $table->timestamps();
         });
     }

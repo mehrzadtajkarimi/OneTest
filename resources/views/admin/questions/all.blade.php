@@ -49,21 +49,21 @@
                         <td>{{ $item->question }}</td>
                         <td>{{ $item->mark }}</td>
                         <td>
-                            <a name="" id="" class="btn btn-primary btn-sm"
+                            <a name="" id="" class="btn btn-primary btn-sm disabled"
                                 href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">نمایش پاسخ ها</a>
                         </td>
                         <td class="d-flex">
-                            <form action="{{ route('admin.tests.destroy',$item->id) }}" method="post">
+                            <form action="{{ route('admin.question.destroy',$item->id) }}" method="post">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger btn-sm ml-2">خروج</button>
+                                <button type="submit" class="btn btn-danger btn-sm ml-2">حذف</button>
                             </form>
-                            <a name="" id="" class="btn btn-primary btn-sm"
+                            <a name="" id="" class="btn btn-primary btn-sm disabled"
                                 href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">ویرایش</a>
                         </td>
                         <td>
-                            <a name="" id="" class="btn btn-primary btn-sm"
-                                href="{{ route('admin.reply.edit',$item->id,'edit') }}" role="button">ویرایش</a>
+                            <a name="" id="" class="btn btn-primary btn-sm disabled"
+                                href="{{ route('admin.reply.edit',$item->id,'edit') }}" role="button" >ویرایش</a>
                             <a name="" id="" class="btn btn-primary btn-sm"
                                 href="{{ route('admin.reply.create','id='.$item->id) }}" role="button">درج پاسخ</a>
                         </td>

@@ -23,6 +23,7 @@
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <link rel="stylesheet" href="/plugins/ionslider/ion.rangeSlider.css">
+ <link rel="icon" type="image/png" href="home/img/logo.png">
 
 
 
