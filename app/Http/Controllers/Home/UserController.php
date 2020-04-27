@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Home\User;
+namespace App\Http\Controllers\Home;
 
 use App\User;
 use App\Traits\ValidateUser;

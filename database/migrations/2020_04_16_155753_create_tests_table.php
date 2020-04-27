@@ -20,6 +20,7 @@ class CreateTestsTable extends Migration
             $table->unsignedBigInteger('entity_id');
             $table->foreign('entity_id')->references('id')->on('entities');
             $table->string('lesson');
+            $table->unsignedTinyInteger('total_mark')->default(0);//جمع نمرات
             $table->integer('start_at');
             $table->integer('finish_at');
             $table->timestamps();

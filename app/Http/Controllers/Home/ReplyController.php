@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Home;
 
-use App\Model\Entity;
-use App\Model\Question;
+use App\Model\Reply;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Test;
 
-class questionController extends Controller
+class ReplyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,8 @@ class questionController extends Controller
      */
     public function index()
     {
-        $Questions =Question::all();
-        return view('admin.questions.all', compact('Questions'));
+
+        return view('home.user.tests');
     }
 
     /**
@@ -28,9 +26,7 @@ class questionController extends Controller
      */
     public function create()
     {
-        //    return Question::find(1);
-        $tests = Test::all();
-        return view('admin.questions.create', compact('tests'));
+        //
     }
 
     /**
@@ -41,20 +37,16 @@ class questionController extends Controller
      */
     public function store(Request $request)
     {
-
-        // dd($request->all());
-        Question::create($request->all());
-        alert()->success('سوال با موفقیت اضافه شد', 'موفقیت آمیز بود');
-        return back();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\question  $question
+     * @param  \App\Model\Reply  $Reply
      * @return \Illuminate\Http\Response
      */
-    public function show(Question $question)
+    public function show(Reply $Reply)
     {
         //
     }
@@ -62,10 +54,10 @@ class questionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\question  $question
+     * @param  \App\Model\Reply  $Reply
      * @return \Illuminate\Http\Response
      */
-    public function edit(question $question)
+    public function edit(Reply $Reply)
     {
         //
     }
@@ -74,10 +66,10 @@ class questionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\question  $question
+     * @param  \App\Model\Reply  $Reply
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, question $question)
+    public function update(Request $request, Reply $Reply)
     {
         //
     }
@@ -85,12 +77,11 @@ class questionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\question  $question
+     * @param  \App\Model\Reply  $Reply
      * @return \Illuminate\Http\Response
      */
-    public function destroy(question $question)
+    public function destroy(Reply $Reply)
     {
-        $question->delete();
-        return back();
+        //
     }
 }

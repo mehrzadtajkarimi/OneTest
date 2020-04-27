@@ -2,7 +2,8 @@
 
 namespace App\Model;
 
-use App\Model\Question;
+use App\User;
+use App\Model\Option;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
@@ -10,9 +11,13 @@ class Reply extends Model
     // protected $fillable = ['status','answer'];
     protected $guarded = ['id'];
 
-    public function questions()
+    public function user()
     {
-        return $this->belongsTo(Question::class);//متعلق است به سوال
+        return $this->belongsTo(User::class);
+    }
+    public function options()
+    {
+        return $this->hasMany(Option::class);
     }
 
 }

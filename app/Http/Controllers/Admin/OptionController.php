@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Test;
-use App\Model\Reply;
+use App\Model\Option;
+use App\Model\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Question;
 
-class ReplyController extends Controller
+class OptionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class ReplyController extends Controller
      */
     public function index()
     {
-        //   $Questions=  Test::all();
-        return view('admin.reply.all');
+        return view('home.user.tests');
     }
 
     /**
@@ -28,10 +26,9 @@ class ReplyController extends Controller
      */
     public function create()
     {
-
         $questions = Question::find($_GET['id']);
-        $reply = Reply::where('question_id', '=', $_GET['id'])->get();
-        return view('admin.reply.create', compact('questions', 'reply'));
+        $reply = Option::where('question_id', '=', $_GET['id'])->get();
+        return view('admin.option.create', compact('questions', 'reply'));
     }
 
     /**
@@ -42,18 +39,17 @@ class ReplyController extends Controller
      */
     public function store(Request $request)
     {
-
-        Reply::create($request->all());
+        Option::create($request->all());
         return back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Reply  $reply
+     * @param  \App\model\Option  $option
      * @return \Illuminate\Http\Response
      */
-    public function show(Reply $reply)
+    public function show(Option $option)
     {
         //
     }
@@ -61,10 +57,10 @@ class ReplyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\Reply  $reply
+     * @param  \App\model\Option  $option
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reply $reply)
+    public function edit(Option $option)
     {
         //
     }
@@ -73,12 +69,12 @@ class ReplyController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Reply  $reply
+     * @param  \App\model\Option  $option
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reply $reply)
+    public function update(Request $request, Option $option)
     {
-        $status = Reply::find($request->radios);
+        $status = Option::find($request->radios);
         $status->status = 1;
         $status->save();
         return redirect()->route('admin.question.index');
@@ -87,12 +83,12 @@ class ReplyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Reply  $reply
+     * @param  \App\model\Option  $option
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reply $reply)
+    public function destroy(Option $option)
     {
-        $reply->delete();
+        $option->delete();
         return back();
     }
 }

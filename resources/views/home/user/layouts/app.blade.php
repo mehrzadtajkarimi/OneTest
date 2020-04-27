@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-@include('home.user.layouts.include.head')
+    @include('home.user.layouts.include.head')
 </head>
 
 <body style="direction: rtl;">
@@ -57,10 +57,9 @@
             @yield('content')
         </main>
     </div>
-<footer>
-@include('home.user.layouts.include.footer')
-</footer>
-</body>
+    <footer>
+        @include('home.user.layouts.include.footer')
+    </footer>
 </body>
 
 </html>

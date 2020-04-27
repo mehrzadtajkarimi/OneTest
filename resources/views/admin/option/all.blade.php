@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </form>
-                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.reply.create') }}"> ایجاد
+                <a class="btn btn-primary btn-sm mr-3" role="button" href="{{ route('admin.option.create') }}"> ایجاد
                     سوال جدید</a>
             </div>
         </div>
@@ -63,9 +63,9 @@
                         </td>
                         <td>
                             <a name="" id="" class="btn btn-primary btn-sm"
-                                href="{{ route('admin.reply.edit',$item->id,'edit') }}" role="button">ویرایش</a>
+                                href="{{ route('admin.option.edit',$item->id,'edit') }}" role="button">ویرایش</a>
                             <a name="" id="" class="btn btn-primary btn-sm"
-                                href="{{ route('admin.reply.create') }}" role="button">درج پاسخ</a>
+                                href="{{ route('admin.option.create') }}" role="button">درج پاسخ</a>
                         </td>
                     </tr>
                     @endforeach

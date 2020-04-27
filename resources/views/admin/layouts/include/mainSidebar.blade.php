@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-        <img src="home/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="/home/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
         <span class="brand-text font-weight-light">پنل مدیریت</span>
     </a>
@@ -92,23 +92,6 @@
                         </ul>
                     </li>
 
-                    {{-- <li class="nav-item has-treeview {{ is_active(['admin.reply.index','admin.reply.create','admin.reply.edit'],'menu-open')}}">
-                        <a href="#" class="nav-link {{ is_active(['admin.reply.index','admin.reply.create','admin.reply.edit'])}}">
-                            <i class="nav-icon fa fa-list-ol"></i>
-                            <p>
-                                پاسخ ها
-                                <i class="right fa fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('admin.reply.index') }}" class="nav-link  {{ is_active(['admin.reply.index','admin.reply.create','admin.reply.edit'])}}">
-                                    <i class="fa fa-circle-o nav-icon"></i>
-                                    <p>لیست پاسخ ها</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li> --}}
 
                     <li class="nav-item has-treeview {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'],'menu-open')}}">
                         <a href="#" class="nav-link {{ is_active(['admin.entities.index','admin.entities.create','admin.entities.edit'])}}">

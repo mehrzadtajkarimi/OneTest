@@ -1,4 +1,4 @@
-@component('admin.layouts.include.content' , ['title' => 'آزمون جدید'])
+@component('admin.layouts.include.content' , ['title' => 'سوال جدید'])
 
 @slot('breadcrumb')
 <li class="breadcrumb-item "><a href="{{ url('admin.panel') }}">پنل مدیریت</a></li>

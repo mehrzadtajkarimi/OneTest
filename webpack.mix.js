@@ -13,5 +13,24 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/admin.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin.scss', 'public/css')
-    .sass('resources/sass/app.scss', 'public/css');
+
+
+
+
+mix.styles([
+    'public/css/app.css',
+    'public/home/css/jquery.dataTables.min.css',
+    'public/home/css/style.css',
+
+
+], 'public/css/all.css');
+
+
+mix.scripts([
+    'public/js/app.js',
+    'public/home/js/jquery.dataTables.min.js',
+    'public/home/js/main.js',
+
+], 'public/js/all.js');

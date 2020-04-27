@@ -63,9 +63,9 @@
                         </td>
                         <td>
                             <a name="" id="" class="btn btn-primary btn-sm disabled"
-                                href="{{ route('admin.reply.edit',$item->id,'edit') }}" role="button" >ویرایش</a>
+                                href="{{ route('admin.option.edit',$item->id,'edit') }}" role="button" >ویرایش</a>
                             <a name="" id="" class="btn btn-primary btn-sm"
-                                href="{{ route('admin.reply.create','id='.$item->id) }}" role="button">درج پاسخ</a>
+                                href="{{ route('admin.option.create','id='.$item->id) }}" role="button">درج پاسخ</a>
                         </td>
                     </tr>
                     @endforeach

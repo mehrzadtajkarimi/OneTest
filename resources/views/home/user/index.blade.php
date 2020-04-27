@@ -16,11 +16,11 @@
 
                         <div class="row">
                             <div class="col-lg-4 col-md-6">
-                                <a href="" class="single-features text-dark card-link">
+                                <a href="" class="single-features text-dark card-link" >
                                     <div class="icon">
                                         <i class="icofont-lock"></i>
                                     </div>
-                                    <h3>دسترسی سریع</h3>
+                                    <h3>لیست نمرات</h3>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                                         گرافیک است. </p>
                                 </a>
@@ -37,11 +37,11 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6">
-                                <a href="" class="single-features text-dark card-link">
+                                <a href="{{ route('tests.index') }}" class="single-features text-dark card-link">
                                     <div class="icon">
-                                        <i class="icofont-lock"></i>
+                                        <i class="icofont-papers"></i>
                                     </div>
-                                    <h3>ایمنی</h3>
+                                    <h3>امتحانات</h3>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                                         گرافیک است. </p>
                                 </a>
@@ -50,9 +50,9 @@
                             <div class="col-lg-4 col-md-6">
                                 <a href="" class="single-features text-dark card-link">
                                     <div class="icon">
-                                        <i class="icofont-camera"></i>
+                                        <i class="icofont-hand"></i>
                                     </div>
-                                    <h3>فیلتر دوربین</h3>
+                                    <h3>در دست تکمیل</h3>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                                         گرافیک است. </p>
                                 </a>
@@ -61,9 +61,9 @@
                             <div class="col-lg-4 col-md-6">
                                 <a href="" class="single-features text-dark card-link">
                                     <div class="icon">
-                                        <i class="icofont-responsive"></i>
+                                        <i class="icofont-hand"></i>
                                     </div>
-                                    <h3>سریع و بهینه شده</h3>
+                                    <h3>در دست تکمیل</h3>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                                         گرافیک
                                         است. </p>
@@ -73,9 +73,9 @@
                             <div class="col-lg-4 col-md-6">
                                 <a href="" class="single-features text-dark card-link">
                                     <div class="icon">
-                                        <i class="icofont-hand-drag1"></i>
+                                        <i class="icofont-hand"></i>
                                     </div>
-                                    <h3>دراگ و دراپ</h3>
+                                    <h3>در دست تکمیل</h3>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
                                         گرافیک
                                         است. </p>

@@ -21,4 +21,5 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::resource('user', 'Home\User\UserController')->only('index','edit','update');
+Route::resource('user', 'Home\UserController')->only('index','edit','update');
+Route::resource('tests', 'Home\ReplyController');

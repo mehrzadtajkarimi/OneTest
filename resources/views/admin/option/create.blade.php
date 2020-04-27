@@ -10,7 +10,7 @@
     <div class="col-md-6">
         <div class="card shadow  h-100">
             <div class="card-body ">
-                <form class="form-horizontal" action="{{ route('admin.reply.store') }}" method="POST">
+                <form class="form-horizontal" action="{{ route('admin.option.store') }}" method="POST">
                     @csrf
                     <div class="card ">
                         <div class="card-header">
@@ -44,7 +44,7 @@
     <div class="col-md-6">
         <div class="card shadow h-100">
             <div class="card-body">
-                <form class="form-horizontal" action="{{ route('admin.reply.update',$questions->id ) }}" method="POST">
+                <form class="form-horizontal" action="{{ route('admin.option.update',$questions->id ) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="card ">

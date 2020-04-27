@@ -12,15 +12,15 @@ class CreateRepliesTable extends Migration
      * @return void
      */
     public function up()
-    
+
     {
 
         Schema::create('replies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('question_id');
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
-            $table->string('answer');
-            $table->boolean('status')->default(0); //fبرای سوالات چهار جوابی  و به صورت پیش فرض غلط است
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('option_id');
+            $table->foreign('option_id')->references('id')->on('options')->onDelete('cascade');
             $table->timestamps();
         });
     }
