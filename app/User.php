@@ -3,7 +3,7 @@
 namespace App;
 
 use App\Model\Test;
-use App\Model\UserReply;
+use App\Model\Reply;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -63,8 +63,8 @@ class User extends Authenticatable
         return $this->hasMany(Test::class);
     }
 
-    public function userReplies()
+    public function replies()
     {
-        return $this->hasMany(UserReply::class);
+        return $this->hasMany(Reply::class);
     }
 }

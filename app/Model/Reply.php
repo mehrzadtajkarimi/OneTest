@@ -4,6 +4,7 @@ namespace App\Model;
 
 use App\User;
 use App\Model\Option;
+use App\Model\Question;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
@@ -15,9 +16,13 @@ class Reply extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function options()
+    public function option()
     {
-        return $this->hasMany(Option::class);
+        return $this->belongsTo(Option::class);
+    }
+    public function Question()
+    {
+        return $this->belongsTo(Question::class);
     }
 
 }

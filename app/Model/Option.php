@@ -18,6 +18,6 @@ class Option extends Model
 
     public function reply()
     {
-        return $this->belongsTo(Reply::class); //متعلق است به سوال
+        return $this->hasOne(Reply::class); //متعلق است به سوال
     }
 }

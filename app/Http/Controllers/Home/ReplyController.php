@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Model\Test;
 use App\Model\Reply;
+use App\Model\Question;
 use Illuminate\Http\Request;
+use Hekmatinasser\Verta\Verta;
 use App\Http\Controllers\Controller;
+use App\Model\Option;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class ReplyController extends Controller
 {
@@ -15,8 +21,17 @@ class ReplyController extends Controller
      */
     public function index()
     {
+        $id = Auth::id();
+        $tests = Test::where('user_id', $id)->get();
+        $now = verta()->timezone('Asia/Tehran');
+        Verta::setStringformat('%d , %B %Y - H:i');
 
-        return view('home.user.tests');
+        // $start_at=verta($tests->pluck('start_at'))->gt();
+        // $finish_at=verta($tests->pluck('finish_at'));
+        // $alive=;
+        // dd($now);
+
+        return view('home.user.tests', compact('tests', 'now'));
     }
 
     /**
@@ -24,9 +39,14 @@ class ReplyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $id = $request->id;
+        $questions = Question::where('test_id',$id)
+        ->with('options')
+        ->get();
+// dd($questions);
+        return view("home.user.test", compact('questions'));
     }
 
     /**
@@ -83,5 +103,6 @@ class ReplyController extends Controller
     public function destroy(Reply $Reply)
     {
         //
+
     }
 }

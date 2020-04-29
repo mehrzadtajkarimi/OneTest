@@ -1,6 +1,7 @@
 <!-- Main JS -->
 <script src="{{ asset('js/all.js') }}"></script>
 <script>
+    new WOW().init();
     $(document).ready(function() {
         $('#example').DataTable({
             "language": {
