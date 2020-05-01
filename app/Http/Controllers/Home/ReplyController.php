@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Home;
 
+use Carbon\Carbon;
 use App\Model\Test;
 use App\Model\Reply;
+use App\Model\Option;
 use App\Model\Question;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Hekmatinasser\Verta\Verta;
 use App\Http\Controllers\Controller;
-use App\Model\Option;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class ReplyController extends Controller
@@ -57,7 +58,22 @@ class ReplyController extends Controller
      */
     public function store(Request $request)
     {
+        $request = $request->all();
+        $request = array_slice($request, 1, count($request), true);
+
+
+
+
+
         dd($request);
+        foreach ($request as $keys => $values) {
+            Reply::create([
+                'user_id' => auth()->id(),
+                'option_id' => $keys,
+                'question_id' => $values
+            ]);
+        }
+        return redirect()->route('tests.index');
     }
 
     /**

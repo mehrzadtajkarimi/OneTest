@@ -24,8 +24,8 @@
                         <div class="col-md-6">
                                 @foreach ($item->options as $option)
                                 <div class="form-check text-right">
-                                    <input class="form-check-input" type="radio" name="{{ $item->id }}"
-                                        id="radios{{$option->id}}" value="{{ $option->id }}">
+                                    <input class="form-check-input" type="radio" name="{{ $item->id  }}"
+                                        id="radios{{$option->id}}" value="{{ $option->id .'-'. $option->status }}">
                                     <label class="form-check-label pr-4" for="radios{{$option->id}}">
                                         {{ $option->answer }}
                                     </label>

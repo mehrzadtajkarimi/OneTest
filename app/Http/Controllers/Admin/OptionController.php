@@ -25,11 +25,12 @@ class OptionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+$question_id=$request->id;
 
-        $questions = Question::find($_GET['id']);
-        $options = Option::where('question_id', '=', $_GET['id'])->get();
+        $questions = Question::find($question_id);
+        $options = Option::where('question_id', $question_id)->get();
         return view('admin.option.create', compact('questions', 'options'));
     }
 
@@ -78,9 +79,9 @@ class OptionController extends Controller
     public function update(Request $request, Option $option)
     {
         $question_id = $request->radios;
-        $status = Option::where('question_id', $question_id)
-        ->orWhere('status', 1)
-        ->update(['status' => 0]);
+        $status = Option::where('question_id', $question_id )
+        ->Where('status',TRUE)
+        ->update(['status' => FALSE]);
         $status = Option::find($question_id);
         $status->status = 1;
         $status->save();

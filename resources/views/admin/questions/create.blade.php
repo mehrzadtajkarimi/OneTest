@@ -49,8 +49,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Input3">سوال</label>
-                            <textarea class="form-control" name="question" id="Input3" rows="3"
-                                placeholder="وارد کردن اطلاعات ..."></textarea>
+                            <input type="text" class="form-control" name="question" id="Input3" >
                         </div>
                     </div>
                 </div>

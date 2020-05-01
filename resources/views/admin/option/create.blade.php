@@ -1,4 +1,4 @@
-@component('admin.layouts.include.content' , ['title' => 'آزمون جدید'])
+@component('admin.layouts.include.content' , ['title' => 'سوال جدید'])
 
 @slot('breadcrumb')
 <li class="breadcrumb-item "><a href="{{ url('admin.panel') }}">پنل مدیریت</a></li>
@@ -24,10 +24,11 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="Input3">
-                                            پاسخ
+                                            سوال
                                         </label>
-                                        <textarea class="form-control" name="answer" id="Input3" rows="3"
-                                            placeholder="وارد کردن اطلاعات ..."></textarea>
+                                        <input type="text" class="form-control" name="answer" id="Input3" autofocus >
+                                        {{-- <textarea class="form-control" name="answer" id="Input3" rows="3"
+                                            placeholder="وارد کردن اطلاعات ..."></textarea> --}}
                                     </div>
                                 </div>
                             </div>
