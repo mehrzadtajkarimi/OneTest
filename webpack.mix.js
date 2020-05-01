@@ -21,6 +21,7 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.styles([
     'public/css/app.css',
+    'public/home/css/TimeCircles.css',
     'public/home/css/animate.css',
     'public/home/css/jquery.dataTables.min.css',
     'public/home/css/style.css',
@@ -32,6 +33,7 @@ mix.styles([
 mix.scripts([
     'public/js/app.js',
     'public/home/js/wow.min.js',
+    'public/home/js/TimeCircles.js',
     'public/home/js/jquery.dataTables.min.js',
     'public/home/js/main.js',
 

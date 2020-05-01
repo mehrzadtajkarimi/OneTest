@@ -29,7 +29,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body table-responsive p-0">
-            <table class="table table-hover">
+            <table class="table table-hover text-center">
                 <tbody>
                     <tr>
                         <th>ردیف</th>
@@ -38,8 +38,8 @@
                         <th>سوال</th>
                         <th>نمره</th>
                         <th>نمایش پاسخ</th>
-                        <th> حذف و ویرایش سوال</th>
                         <th> ایجاد و ویرایش پاسخ</th>
+                        <th> حذف</th>
                     </tr>
                     @foreach ($Questions as $item)
                     <tr>
@@ -52,20 +52,22 @@
                             <a name="" id="" class="btn btn-primary btn-sm disabled"
                                 href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">نمایش پاسخ ها</a>
                         </td>
-                        <td class="d-flex">
-                            <form action="{{ route('admin.question.destroy',$item->id) }}" method="post">
-                                @csrf
-                                @method('delete')
-                                <button type="submit" class="btn btn-danger btn-sm ml-2">حذف</button>
-                            </form>
-                            <a name="" id="" class="btn btn-primary btn-sm disabled"
-                                href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">ویرایش</a>
-                        </td>
                         <td>
                             <a name="" id="" class="btn btn-primary btn-sm disabled"
                                 href="{{ route('admin.option.edit',$item->id,'edit') }}" role="button" >ویرایش</a>
                             <a name="" id="" class="btn btn-primary btn-sm"
                                 href="{{ route('admin.option.create','id='.$item->id) }}" role="button">درج پاسخ</a>
+                        </td>
+                        <td class="">
+                            <form action="{{ route('admin.question.destroy',$item->id) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger btn-sm ml-2">
+                                    <i class="icofont-bin"></i>
+                                </button>
+                            </form>
+                            {{-- <a name="" id="" class="btn btn-primary btn-sm disabled "
+                                href="{{ route('admin.tests.edit',$item->id,'edit') }}" role="button">ویرایش</a> --}}
                         </td>
                     </tr>
                     @endforeach

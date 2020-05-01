@@ -7210,3 +7210,13 @@ Back To Top CSS
 .rounded-1 {
     border-radius: 1.25rem !important;
 }
+
+.modal_wrapper {
+    z-index: 9999;
+    background-color: #00000070;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}

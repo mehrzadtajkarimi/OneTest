@@ -27,7 +27,7 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body table-responsive p-0">
-            <table class="table table-hover">
+            <table class="table table-hover text-center">
                 <tbody>
                     <tr>
                         <th>ردیف</th>
@@ -55,7 +55,20 @@
                         <td>{{ verta($test->start_at)}}</td>
                         <td>{{ verta($test->finish_at)}}</td>
 
-                        <td><span class="badge bg-danger">پایان یافته</span></td>
+                        <td>
+                            @if (verta($test->start_at)->gte())
+                            <span class="badge badge-pill badge-warning">برگزار نشده</span>
+                            @elseif (verta($test->finish_at)->lte())
+                            <span class="badge badge-pill badge-danger">برگزار شده</span>
+                            @else
+                            <a href="{{ route('tests.create','id='.$test->id) }}" class="wow pulse" data-wow-iteration="50" data-wow-duration="1.5s">
+                                <span class="badge badge-pill badge-success">
+                                    <span> درحال برگزاری</span>
+                                    <i class="icofont-hand-drag1 "></i>
+                                </span>
+                            </a>
+                            @endif
+                        </td>
 
                         <td class="d-flex">
                             <form action="{{ route('admin.tests.destroy',$test->id) }}" method="post">

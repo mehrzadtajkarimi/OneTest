@@ -42,10 +42,10 @@ class ReplyController extends Controller
     public function create(Request $request)
     {
         $id = $request->id;
-        $questions = Question::where('test_id',$id)
-        ->with('options')
-        ->get();
-// dd($questions);
+        $questions = Question::where('test_id', $id)
+            ->with(['options', 'tests'])
+            ->get();
+        // dd($questions);
         return view("home.user.test", compact('questions'));
     }
 
@@ -57,7 +57,7 @@ class ReplyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
@@ -103,6 +103,7 @@ class ReplyController extends Controller
     public function destroy(Reply $Reply)
     {
         //
+
 
     }
 }

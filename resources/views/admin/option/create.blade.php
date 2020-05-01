@@ -52,11 +52,11 @@
                             <h5>پاسخ ها</h5>
                         </div>
                         <div class="card-body p-4 h-100">
-                            @foreach ($reply as $item)
+                            @foreach ($options as $item)
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radios"
-                                    id="radios{{$loop->iteration}}" value="{{ $item->id }}">
-                                <label class="form-check-label" for="radios{{$loop->iteration}}">
+                                    id="radios{{$loop->iteration}}" value="{{ $item->id }}" {{ $item->status == 1 ? 'checked' :''}}>
+                                <label class="form-check-label" for="radios{{$loop->iteration}}" >
                                     <ul>
                                         <li>{{ $item->answer }}</li>
                                     </ul>

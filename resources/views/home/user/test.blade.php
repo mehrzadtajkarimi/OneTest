@@ -4,7 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <form action="{{ route('tests.store') }}" id="formToStore" method="POST">
+                @csrf
             @foreach ($questions as $item)
+            <div class="row">
+                    <div id="TimeCircles" class="w-50 m-auto fixed mt-0" data-timer="{{ verta($item->tests->finish_at)->diffSeconds()*-1}}"></div>
+                    {{-- <div id="TimeCircles" class="w-50 m-auto" data-timer="3"></div> --}}
+            </div>
             <div class="card">
                 <div class="card-header text-right">
                     <p class=" d-inline">سوال شماره :{{ $loop->iteration }}</p>
@@ -16,21 +22,22 @@
                             <p class="text-right card-text">{{ $item->question }}؟</p>
                         </div>
                         <div class="col-md-6">
-                            @foreach ($item->options as $option)
-                            <div class="form-check text-right">
-                                <input class="form-check-input" type="radio" name="radios{{ $item->id }}"
-                                    id="radios{{$option->id}}" value="{{ $option->id }}">
-                                <label class="form-check-label pr-4" for="radios{{$option->id}}">
-                                    {{ $option->answer }}
-                                </label>
+                                @foreach ($item->options as $option)
+                                <div class="form-check text-right">
+                                    <input class="form-check-input" type="radio" name="{{ $item->id }}"
+                                        id="radios{{$option->id}}" value="{{ $option->id }}">
+                                    <label class="form-check-label pr-4" for="radios{{$option->id}}">
+                                        {{ $option->answer }}
+                                    </label>
+                                </div>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
-
                     </div>
                 </div>
-            </div>
-            @endforeach
+                @endforeach
+                <button type="submit" class="btn btn-info">ارسال</button>
+            </form>
         </div>
     </div>
 </div>

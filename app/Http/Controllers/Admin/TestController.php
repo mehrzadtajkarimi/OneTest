@@ -24,7 +24,7 @@ class TestController extends Controller
                 ->orWhere('family', 'LIKE', "%{$keyword}%");
         }
         $tests = $test->paginate(15);
-        Verta::setStringformat('%A %e %B H:i ');
+
         return view('admin.tests.all', compact('tests'));
     }
 

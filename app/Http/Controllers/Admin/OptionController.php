@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Model\Option;
 use App\Model\Question;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 
 class OptionController extends Controller
@@ -26,9 +27,10 @@ class OptionController extends Controller
      */
     public function create()
     {
+
         $questions = Question::find($_GET['id']);
-        $reply = Option::where('question_id', '=', $_GET['id'])->get();
-        return view('admin.option.create', compact('questions', 'reply'));
+        $options = Option::where('question_id', '=', $_GET['id'])->get();
+        return view('admin.option.create', compact('questions', 'options'));
     }
 
     /**
@@ -39,6 +41,7 @@ class OptionController extends Controller
      */
     public function store(Request $request)
     {
+
         Option::create($request->all());
         return back();
     }
@@ -74,9 +77,14 @@ class OptionController extends Controller
      */
     public function update(Request $request, Option $option)
     {
-        $status = Option::find($request->radios);
+        $question_id = $request->radios;
+        $status = Option::where('question_id', $question_id)
+        ->orWhere('status', 1)
+        ->update(['status' => 0]);
+        $status = Option::find($question_id);
         $status->status = 1;
         $status->save();
+
         return redirect()->route('admin.question.index');
     }
 
