@@ -27,7 +27,7 @@ class OptionController extends Controller
      */
     public function create(Request $request)
     {
-$question_id=$request->id;
+        $question_id = $request->id;
 
         $questions = Question::find($question_id);
         $options = Option::where('question_id', $question_id)->get();
@@ -76,13 +76,15 @@ $question_id=$request->id;
      * @param  \App\model\Option  $option
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Option $option)
+    public function update(Request $request, $question_id)
     {
-        $question_id = $request->radios;
-        $status = Option::where('question_id', $question_id )
-        ->Where('status',TRUE)
-        ->update(['status' => FALSE]);
-        $status = Option::find($question_id);
+        $question = Question::find($question_id);
+        if (!$question  || !($question instanceof Question)) {
+            return redirect()->route('admin.question.index');
+        }
+        $status = Option::where('question_id', $question_id)
+            ->update(['status' => FALSE]);
+        $status = Option::find($request->radios);
         $status->status = 1;
         $status->save();
 

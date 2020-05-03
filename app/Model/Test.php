@@ -15,14 +15,22 @@ class Test extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class);//متعلق است به کاربر
+        return $this->belongsTo(User::class);
     }
     public function entity()
     {
-        return $this->belongsTo(Entity::class);// آزمون متعلق است به موجودیت
+        return $this->belongsTo(Entity::class);
     }
     public function questions()
     {
-        return $this->hasMany(Question::class);//تعداد زیادی سوال وجود دارد
+        return $this->hasMany(Question::class);
     }
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+    // public function getSumMarkAttribute()
+    // {
+
+    // }
 }

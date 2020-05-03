@@ -13,15 +13,15 @@ class Question extends Model
     protected $guarded = ['id'];
     public function tests()
     {
-        return $this->belongsTo(Test::class,'test_id');//سوال متعلق است به آزمون
+        return $this->belongsTo(Test::class,'test_id');
     }
 
     public function options()
     {
-        return $this->hasMany(Option::class);//تعداد زیادی پاسخ موجود است
+        return $this->hasMany(Option::class);
     }
-    public function replies()
+    public function reply()
     {
-        return $this->hasMany(Reply::class);//تعداد زیادی پاسخ موجود است
+        return $this->hasOne(Reply::class);
     }
 }

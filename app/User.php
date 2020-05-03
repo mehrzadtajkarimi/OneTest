@@ -57,7 +57,11 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($value);
     }
 
-
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @method tests() 
+     */
     public function tests()
     {
         return $this->hasMany(Test::class);

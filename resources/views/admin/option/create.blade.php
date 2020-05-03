@@ -48,6 +48,7 @@
                 <form class="form-horizontal" action="{{ route('admin.option.update',$questions->id ) }}" method="POST">
                     @csrf
                     @method('PUT')
+                    {{-- {{ dd($questions->id) }} --}}
                     <div class="card ">
                         <div class="card-header">
                             <h5>پاسخ ها</h5>

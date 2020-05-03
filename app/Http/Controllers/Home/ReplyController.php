@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers\Home;
 
-use Carbon\Carbon;
 use App\Model\Test;
 use App\Model\Reply;
-use App\Model\Option;
 use App\Model\Question;
-use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Hekmatinasser\Verta\Verta;
 use App\Http\Controllers\Controller;
@@ -22,17 +19,19 @@ class ReplyController extends Controller
      */
     public function index()
     {
-        $id = Auth::id();
-        $tests = Test::where('user_id', $id)->get();
-        $now = verta()->timezone('Asia/Tehran');
+        $user    = Auth::user();
+        $tests   = $user->tests()->get();
+        // $replies = $user->replies()
+        // ->groupBy('test_id')
+        // ->selectRaw('sum(mark)as sum')
+        // ->pluck('sum');
+
+
+        // dd($replies);
         Verta::setStringformat('%d , %B %Y - H:i');
 
-        // $start_at=verta($tests->pluck('start_at'))->gt();
-        // $finish_at=verta($tests->pluck('finish_at'));
-        // $alive=;
-        // dd($now);
 
-        return view('home.user.tests', compact('tests', 'now'));
+        return view('home.user.tests', compact('tests'));
     }
 
     /**
@@ -42,12 +41,11 @@ class ReplyController extends Controller
      */
     public function create(Request $request)
     {
-        $id = $request->id;
-        $questions = Question::where('test_id', $id)
+        $test_id = $request->id;
+        $questions = Question::where('test_id', $test_id)
             ->with(['options', 'tests'])
             ->get();
-        // dd($questions);
-        return view("home.user.test", compact('questions'));
+        return view("home.user.test", compact('questions', 'test_id'));
     }
 
     /**
@@ -60,17 +58,17 @@ class ReplyController extends Controller
     {
         $request = $request->all();
         $request = array_slice($request, 1, count($request), true);
-
-
-
-
-
-        dd($request);
         foreach ($request as $keys => $values) {
+            $explode = explode('-', $values);
+            $values  = $explode[0];
+            $mark    = $explode[1] == TRUE ? $explode[2] : 0;
+            $test_id = $explode[3];
             Reply::create([
                 'user_id' => auth()->id(),
-                'option_id' => $keys,
-                'question_id' => $values
+                'option_id' => $values,
+                'question_id' => $keys,
+                'test_id' => $test_id,
+                'mark' => $mark,
             ]);
         }
         return redirect()->route('tests.index');

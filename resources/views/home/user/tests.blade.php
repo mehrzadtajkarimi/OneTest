@@ -22,15 +22,16 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->entity->class }}</td>
                             <td>{{ $item->lesson}}</td>
-                            <td>-</td>
+                            <td>{{ array_sum($item->replies()->pluck('mark')->toArray()) }}</td>
                             <td>{{ verta($item->start_at) }}</td>
                             <td>
-                                @if (verta($item->start_at)->gte($now))
+                                @if (verta($item->start_at)->gte())
                                 <span class="badge badge-pill badge-warning">برگزار نشده</span>
-                                @elseif (verta($item->finish_at)->lte($now))
+                                @elseif (verta($item->finish_at)->lte())
                                 <span class="badge badge-pill badge-danger">برگزار شده</span>
                                 @else
-                                <a href="{{ route('tests.create','id='.$item->id) }}" class="wow pulse" data-wow-iteration="50" data-wow-duration="1.5s">
+                                <a href="{{ route('tests.create','id='.$item->id) }}" class="wow pulse"
+                                    data-wow-iteration="50" data-wow-duration="1.5s">
                                     <span class="badge badge-pill badge-success">
                                         <span> درحال برگزاری</span>
                                         <i class="icofont-hand-drag1 "></i>

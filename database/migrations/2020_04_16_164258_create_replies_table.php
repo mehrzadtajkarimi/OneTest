@@ -19,10 +19,13 @@ class CreateRepliesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('option_id');
-            $table->foreign('option_id')->references('id')->on('options')->onDelete('cascade');
+            $table->unsignedBigInteger('test_id');
+            $table->foreign('test_id')->references('id')->on('tests');
             $table->unsignedBigInteger('question_id');
-            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+            $table->foreign('question_id')->references('id')->on('questions');
+            $table->unsignedBigInteger('option_id');
+            $table->foreign('option_id')->references('id')->on('options');
+            $table->float('mark'); //نمره
             $table->timestamps();
         });
     }
