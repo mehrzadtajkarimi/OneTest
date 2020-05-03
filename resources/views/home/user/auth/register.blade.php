@@ -20,7 +20,7 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="row">
-                            <div class="col-lg-12">
+                            {{-- <div class="col-lg-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control @error('user_name') is-invalid @enderror"
                                         name="user_name" value="{{ old('user_name') }}" placeholder="نام کاربری" required
@@ -31,9 +31,75 @@
                                     </span>
                                     @enderror
                                 </div>
+                            </div> --}}
+
+                            {{-- <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control @error('user_name') is-invalid @enderror"
+                                        name="user_name" value="{{ old('user_name') }}" placeholder="نام کاربری "
+                                        autocomplete="user_name" required autofocus>
+                                    @error('user_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                        name="name" value="{{ old('name') }}" placeholder="نام "
+                                        autocomplete="name" required autofocus>
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
                             </div>
 
                             <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control @error('family') is-invalid @enderror"
+                                        name="family" value="{{ old('family') }}" placeholder="نام خانوادگی"
+                                        autocomplete="family" required >
+                                    @error('family')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            {{-- <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control @error('mobile') is-invalid @enderror"
+                                        name="mobile" value="{{ old('mobile') }}" placeholder="شماره موبایل" required
+                                        autocomplete="name" autofocus>
+                                    @error('mobile')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="number"
+                                        class="form-control @error('nationalCode') is-invalid @enderror"
+                                        name="nationalCode" value="{{ old('nationalCode')?? $user->nationalCode }}"
+                                        placeholder="کد ملی" required autocomplete="nationalCode">
+                                    @error('nationalCode')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
+
+                            {{-- <div class="col-lg-12">
                                 <div class="form-group">
                                     <input type="email" class="form-control @error('email') is-invalid @enderror"
                                         name="email" value="{{ old('email') }}" placeholder="ایمیل" required
@@ -44,7 +110,7 @@
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="col-lg-12">
                                 <div class="form-group">
