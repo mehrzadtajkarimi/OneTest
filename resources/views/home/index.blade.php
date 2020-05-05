@@ -7,24 +7,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap Min CSS -->
-    <link rel="stylesheet" href="{{ asset('/home/css/bootstrap.min.css')}}">
-    <!-- Animate CSS -->
+    {{-- <link rel="stylesheet" href="{{ asset('/home/css/bootstrap.min.css')}}"> 
     <link rel="stylesheet" href="{{ asset('/home/css/animate.css')}}">
-    <!-- IcoFont Min CSS -->
     <link rel="stylesheet" href="{{ asset('/home/css/icofont.min.css')}}">
-    <!-- Meanmenu Min CSS -->
     <link rel="stylesheet" href="{{ asset('/home/css/meanmenu.css')}}">
-    <!-- Magnific Popup Min CSS -->
     <link rel="stylesheet" href="{{ asset('/home/css/magnific-popup.min.css')}}">
-    <!-- Owl Carousel Min CSS -->
     <link rel="stylesheet" href="{{ asset('/home/css/owl.carousel.min.css')}}">
-    <!-- NiceSelect Min CSS -->
     <link rel="stylesheet" href="{{ asset('/home/css/nice-select.css')}}">
-    <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('/home/css/style.css')}}">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{{ asset('/home/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('/home/css/responsive.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('/css/all.css')}}">
 
     <title>Quiz</title>
 
@@ -41,16 +33,16 @@
     <!-- Start Navbar Area -->
     <header id="header">
         <div class="crake-mobile-nav">
-            <div class="logo">
-                {{-- <img src="{{ asset('/home/img/logo.png')}}" alt=""> --}}
+            <div class="logo d-flex" style="top: 0;left: 0; ">
+                <img src="{{ asset('/home/img/logo.png')}}" alt="logo" class="w-25 ">
             </div>
         </div>
 
         <div class="crake-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    {{-- <a class="navbar-brand" href="index.html"><img class="img-fluid w-75"
-                            src="{{ asset('/home/img/logo.png')}}" alt="logo"></a> --}}
+                    <a class="navbar-brand" href="index.html"><img class="img-fluid w-25"
+                            src="{{ asset('/home/img/logo.png')}}" alt="logo"></a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarپشتیبانیedContent">
                         <ul class="navbar-nav nav ml-auto">
                             @if (Route::has('login'))
@@ -156,7 +148,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                                    value="{{ old('name') }}" placeholder="نام " autocomplete="name" required autofocus>
+                                    value="{{ old('name') }}" placeholder="نام " autocomplete="name" required >
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -324,38 +316,24 @@
     <div class="back-to-top">بالا</div>
     <!-- End Back Top top -->
 
-    <!-- Jquery Min JS -->
+    {{-- <!-- Jquery Min JS -->
     <script src="{{ asset('/home/js/jquery.min.js')}}"></script>
-    <!-- Popper Min JS -->
     <script src="{{ asset('/home/js/popper.min.js')}}"></script>
-    <!-- Bootstrap Min JS -->
     <script src="{{ asset('/home/js/bootstrap.min.js')}}"></script>
-    <!-- Canvas Min JS -->
     <script src="{{ asset('/home/js/canvas.min.js')}}"></script>
-    <!-- Meanmenu Min JS -->
     <script src="{{ asset('/home/js/jquery.meanmenu.min.js')}}"></script>
-    <!-- WOW Min JS -->
     <script src="{{ asset('/home/js/wow.min.js')}}"></script>
-    <!-- Tilt Min JS -->
     <script src="{{ asset('/home/js/tilt.jquery.min.js')}}"></script>
-    <!-- Magnific Popup Min JS -->
     <script src="{{ asset('/home/js/jquery.magnific-popup.min.js')}}"></script>
-    <!-- Owl Carousel Min JS -->
     <script src="{{ asset('/home/js/owl.carousel.min.js')}}"></script>
-    <!-- Waypoints Min Js -->
     <script src="{{ asset('/home/js/waypoints.min.js')}}"></script>
-    <!-- Jquery CounterUp Min JS -->
     <script src="{{ asset('/home/js/jquery.counterup.min.js')}}"></script>
-    <!-- NiceSelect Min Js -->
     <script src="{{ asset('/home/js/jquery.nice-select.min.js')}}"></script>
-    <!-- ajaxChimp Min JS -->
     <script src="{{ asset('/home/js/jquery.ajaxchimp.min.js')}}"></script>
-    <!-- Form Validator Min JS -->
     <script src="{{ asset('/home/js/form-validator.min.js')}}"></script>
-    <!-- Contact Form Min JS -->
     <script src="{{ asset('/home/js/contact-form-script.js')}}"></script>
-    <!-- Main JS -->
-    <script src="{{ asset('/home/js/main.js')}}"></script>
+    <script src="{{ asset('/home/js/main.js')}}"></script> --}}
+    <script src="{{ asset('/js/all.js')}}"></script>
 </body>
 
 </html>

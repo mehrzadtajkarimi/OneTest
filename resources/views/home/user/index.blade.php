@@ -16,9 +16,9 @@
 
                         <div class="row">
                             <div class="col-lg-4 col-md-6">
-                                <a href="" class="single-features text-dark card-link" >
-                                    <div class="icon">
-                                        <i class="icofont-lock"></i>
+                                <a href="" class="single-features text-dark card-link " >
+                                    <div class="icon shadow">
+                                        <i class="icofont-lock "></i>
                                     </div>
                                     <h3>لیست نمرات</h3>
                                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
@@ -28,7 +28,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a href="{{ route('user.edit',$user->id,'edit') }}" class="single-features text-dark card-link">
-                                    <div class="icon">
+                                    <div class="icon shadow">
                                         <i class="icofont-heart-eyes"></i>
                                     </div>
                                     <h3>تکمیل پروفایل</h3>
@@ -38,7 +38,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a href="{{ route('tests.index') }}" class="single-features text-dark card-link">
-                                    <div class="icon">
+                                    <div class="icon shadow">
                                         <i class="icofont-papers"></i>
                                     </div>
                                     <h3>امتحانات</h3>
@@ -49,7 +49,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a href="" class="single-features text-dark card-link">
-                                    <div class="icon">
+                                    <div class="icon shadow">
                                         <i class="icofont-hand"></i>
                                     </div>
                                     <h3>در دست تکمیل</h3>
@@ -60,7 +60,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a href="" class="single-features text-dark card-link">
-                                    <div class="icon">
+                                    <div class="icon shadow">
                                         <i class="icofont-hand"></i>
                                     </div>
                                     <h3>در دست تکمیل</h3>
@@ -72,7 +72,7 @@
 
                             <div class="col-lg-4 col-md-6">
                                 <a href="" class="single-features text-dark card-link">
-                                    <div class="icon">
+                                    <div class="icon shadow">
                                         <i class="icofont-hand"></i>
                                     </div>
                                     <h3>در دست تکمیل</h3>

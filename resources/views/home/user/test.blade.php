@@ -13,18 +13,18 @@
                     {{-- <div id="TimeCircles" class="w-50 m-auto" data-timer="3"></div> --}}
                 </div>
                 <div class="card">
-                    <div class="card-header text-right">
+                    <div class="card-header ">
                         <p class=" d-inline">سوال شماره :{{ $loop->iteration }}</p>
                         <span class="badge  badge-success float-left ">{{ $item->mark }}: نمره </span>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="text-right card-text">{{ $item->question }}؟</p>
+                                <p class="card-text">{{ $item->question }}؟</p>
                             </div>
                             <div class="col-md-6">
                                 @foreach ($item->options as $option)
-                                <div class="form-check text-right">
+                                <div class="form-check ">
                                     <input class="form-check-input" type="radio" name="{{ $item->id  }}"
                                         id="radios{{$option->id}}"
                                         value="{{ $option->id .'-'. $option->status.'-'. $item->mark .'-'. $test_id  }}">

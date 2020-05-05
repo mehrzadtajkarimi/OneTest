@@ -1,4 +1,5 @@
 <!-- Main JS -->
+<script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/all.js') }}"></script>
 <script>
     new WOW().init();

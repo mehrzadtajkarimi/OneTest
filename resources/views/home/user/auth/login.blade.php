@@ -55,7 +55,7 @@
 
 							<div class="col-lg-6 text-right">
 								@if (Route::has('password.request'))
-								<a class="btn btn-link" href="{{ route('password.request') }}">
+								<a class="" href="{{ route('password.request') }}">
 									{{ __('رمز عبور خود را فرا موش کرده اید؟ ') }}
 								</a>
 								@endif
@@ -65,7 +65,8 @@
 								<button type="submit" class="btn btn-primary mb-2">هم اکنون وارد شوید!</button>
 								<br>
 								<span>کاربر جدید هستید؟ <a href="{{ route('register') }}">ثبت نام کن!</a></span>
-							</div>
+                            </div>
+                            
 						</div>
 					</form>
 				</div>

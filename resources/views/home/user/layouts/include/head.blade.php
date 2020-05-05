@@ -17,4 +17,5 @@
 <link rel="icon" type="image/png" href="home/img/logo.png">
 
 <!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/all.css') }}" rel="stylesheet">
