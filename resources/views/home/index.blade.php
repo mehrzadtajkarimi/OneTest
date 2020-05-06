@@ -7,20 +7,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {{-- <link rel="stylesheet" href="{{ asset('/home/css/bootstrap.min.css')}}"> 
-    <link rel="stylesheet" href="{{ asset('/home/css/animate.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/icofont.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/magnific-popup.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('/home/css/responsive.css')}}"> --}}
-    <link rel="stylesheet" href="{{ asset('/css/all.css')}}">
+    {{-- <link rel="stylesheet" href="{{ asset('/Home/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/animate.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/meanmenu.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/magnific-popup.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/nice-select.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('/Home/css/responsive.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('/Home/css/icofont.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('/css/home.css')}}">
 
     <title>Quiz</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('/home/img/logo.png')}}">
+    <link rel="icon" type="image/png" href="{{ asset('/Home/img/logo.png')}}">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
     <header id="header">
         <div class="crake-mobile-nav">
             <div class="logo d-flex" style="top: 0;left: 0; ">
-                <img src="{{ asset('/home/img/logo.png')}}" alt="logo" class="w-25 ">
+                <img src="{{ asset('/Home/img/logo.png')}}" alt="logo" class="w-25 ">
             </div>
         </div>
 
@@ -42,7 +42,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="index.html"><img class="img-fluid w-25"
-                            src="{{ asset('/home/img/logo.png')}}" alt="logo"></a>
+                            src="{{ asset('/Home/img/logo.png')}}" alt="logo"></a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarپشتیبانیedContent">
                         <ul class="navbar-nav nav ml-auto">
                             @if (Route::has('login'))
@@ -76,32 +76,32 @@
                     <div class="row h-100 justify-content-center align-items-center">
                         <div class="col-lg-6 col-md-12">
                             <div class="saas-image">
-                                <img src="{{ asset('/home/img/saas-shape/arrow.png')}}" class="wow fadeInDown"
+                                <img src="{{ asset('/Home/img/saas-shape/arrow.png')}}" class="wow fadeInDown"
                                     data-wow-delay="0.6s" alt="arrow">
-                                <img src="{{ asset('/home/img/saas-shape/box1.png')}}" class="wow fadeInUp"
+                                <img src="{{ asset('/Home/img/saas-shape/box1.png')}}" class="wow fadeInUp"
                                     data-wow-delay="0.6s" alt="box1">
-                                <img src="{{ asset('/home/img/saas-shape/boy1.png')}}" class="wow fadeInLeft"
+                                <img src="{{ asset('/Home/img/saas-shape/boy1.png')}}" class="wow fadeInLeft"
                                     data-wow-delay="0.6s" alt="boy1">
-                                <img src="{{ asset('/home/img/saas-shape/boy2.png')}}" class="wow zoomIn"
+                                <img src="{{ asset('/Home/img/saas-shape/boy2.png')}}" class="wow zoomIn"
                                     data-wow-delay="0.6s" alt="boy2">
-                                <img src="{{ asset('/home/img/saas-shape/boy3.png')}}" class="wow bounceIn"
+                                <img src="{{ asset('/Home/img/saas-shape/boy3.png')}}" class="wow bounceIn"
                                     data-wow-delay="0.6s" alt="boy3">
-                                <img src="{{ asset('/home/img/saas-shape/digital-screen.png')}}" class="wow fadeInDown"
+                                <img src="{{ asset('/Home/img/saas-shape/digital-screen.png')}}" class="wow fadeInDown"
                                     data-wow-delay="0.6s" alt="digital-screen">
-                                <img src="{{ asset('/home/img/saas-shape/filter1.png')}}" class="wow zoomIn"
+                                <img src="{{ asset('/Home/img/saas-shape/filter1.png')}}" class="wow zoomIn"
                                     data-wow-delay="0.6s" alt="filter1">
-                                <img src="{{ asset('/home/img/saas-shape/filter2.png')}}" class="wow fadeInUp"
+                                <img src="{{ asset('/Home/img/saas-shape/filter2.png')}}" class="wow fadeInUp"
                                     data-wow-delay="0.6s" alt="filter2">
-                                <img src="{{ asset('/home/img/saas-shape/filter3.png')}}" class="wow rotateIn"
+                                <img src="{{ asset('/Home/img/saas-shape/filter3.png')}}" class="wow rotateIn"
                                     data-wow-delay="0.6s" alt="filter3">
-                                <img src="{{ asset('/home/img/saas-shape/girl1.png')}}" class="wow fadeInUp"
+                                <img src="{{ asset('/Home/img/saas-shape/girl1.png')}}" class="wow fadeInUp"
                                     data-wow-delay="0.6s" alt="girl1">
-                                <img src="{{ asset('/home/img/saas-shape/girl2.png')}}" class="wow zoomIn"
+                                <img src="{{ asset('/Home/img/saas-shape/girl2.png')}}" class="wow zoomIn"
                                     data-wow-delay="0.6s" alt="girl2">
-                                <img src="{{ asset('/home/img/saas-shape/monitor.png')}}" class="wow zoomIn"
+                                <img src="{{ asset('/Home/img/saas-shape/monitor.png')}}" class="wow zoomIn"
                                     data-wow-delay="0.6s" alt="monitor">
 
-                                <img src="{{ asset('/home/img/saas-shape/main-image.png')}}" class="wow zoomIn"
+                                <img src="{{ asset('/Home/img/saas-shape/main-image.png')}}" class="wow zoomIn"
                                     data-wow-delay="0.6s" alt="main-image.png')}}">
                             </div>
                         </div>
@@ -123,10 +123,10 @@
         </div>
 
         <div class="bg-gray shape-1"></div>
-        <div class="shape1"><img src="{{ asset('/home/img/shape1.png')}}" alt="img"></div>
-        <div class="shape2"><img src="{{ asset('/home/img/shape2.png')}}" alt="img"></div>
-        <div class="shape3"><img src="{{ asset('/home/img/shape3.png')}}" alt="img"></div>
-        <div class="shape4 rotateme"><img src="{{ asset('/home/img/shape4.png')}}" alt="img"></div>
+        <div class="shape1"><img src="{{ asset('/Home/img/shape1.png')}}" alt="img"></div>
+        <div class="shape2"><img src="{{ asset('/Home/img/shape2.png')}}" alt="img"></div>
+        <div class="shape3"><img src="{{ asset('/Home/img/shape3.png')}}" alt="img"></div>
+        <div class="shape4 rotateme"><img src="{{ asset('/Home/img/shape4.png')}}" alt="img"></div>
     </div>
     <!-- End SaaS Main Banner -->
 
@@ -209,7 +209,7 @@
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-6">
                     <div class="join-img">
-                        <img src="{{ asset('/home/img/3.png')}}" alt="img">
+                        <img src="{{ asset('/Home/img/3.png')}}" alt="img">
                     </div>
                 </div>
 
@@ -317,23 +317,23 @@
     <!-- End Back Top top -->
 
     {{-- <!-- Jquery Min JS -->
-    <script src="{{ asset('/home/js/jquery.min.js')}}"></script>
-    <script src="{{ asset('/home/js/popper.min.js')}}"></script>
-    <script src="{{ asset('/home/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('/home/js/canvas.min.js')}}"></script>
-    <script src="{{ asset('/home/js/jquery.meanmenu.min.js')}}"></script>
-    <script src="{{ asset('/home/js/wow.min.js')}}"></script>
-    <script src="{{ asset('/home/js/tilt.jquery.min.js')}}"></script>
-    <script src="{{ asset('/home/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{ asset('/home/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ asset('/home/js/waypoints.min.js')}}"></script>
-    <script src="{{ asset('/home/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{ asset('/home/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{ asset('/home/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{ asset('/home/js/form-validator.min.js')}}"></script>
-    <script src="{{ asset('/home/js/contact-form-script.js')}}"></script>
-    <script src="{{ asset('/home/js/main.js')}}"></script> --}}
-    <script src="{{ asset('/js/all.js')}}"></script>
+    <script src="{{ asset('/Home/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/popper.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/canvas.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/jquery.meanmenu.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/wow.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/tilt.jquery.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/waypoints.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/form-validator.min.js')}}"></script>
+    <script src="{{ asset('/Home/js/contact-form-script.js')}}"></script>
+    <script src="{{ asset('/Home/js/main.js')}}"></script> --}}
+    <script src="{{ asset('/js/home.js')}}"></script>
 </body>
 
 </html>

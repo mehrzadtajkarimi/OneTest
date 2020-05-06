@@ -83,14 +83,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shape7"><img src="home/img/shape7.png" alt="shape"></div>
-                    <div class="shape3"><img src="home/img/shape3.png" alt="img"></div>
+                    <div class="shape7"><img src="{{ asset('Home/img/shape7.png')}}" alt="shape"></div>
+                    <div class="shape3"><img src="{{ asset('Home/img/shape3.png')}}" alt="img"></div>
                     <div class="bg-gray shape-1"></div>
-                    <div class="shape6"><img src="home/img/shape6.png" alt="img"></div>
-                    <div class="shape8 rotateme"><img src="home/img/shape8.svg" alt="shape"></div>
-                    <div class="shape9"><img src="home/img/shape9.svg" alt="shape"></div>
-                    <div class="shape10"><img src="home/img/shape10.svg" alt="shape"></div>
-                    <div class="shape11 rotateme"><img src="home/img/shape11.svg" alt="shape"></div>
+                    <div class="shape6"><img src="{{ asset('Home/img/shape6.png')}}" alt="img"></div>
+                    <div class="shape8 rotateme"><img src="{{ asset('Home/img/shape8.svg')}}" alt="shape"></div>
+                    <div class="shape9"><img src="{{ asset('Home/img/shape9.svg')}}" alt="shape"></div>
+                    <div class="shape10"><img src="{{ asset('Home/img/shape10.svg')}}" alt="shape"></div>
+                    <div class="shape11 rotateme"><img src="{{ asset('Home/img/shape11.svg')}}" alt="shape"></div>
                 </section>
                 <!-- End Features Area -->
             </div>

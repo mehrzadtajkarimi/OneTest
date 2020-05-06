@@ -1,29 +1,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>پنل مدیریت | داشبورد اول</title>
-<!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Ionicons -->
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<!-- Google Font: Source Sans Pro -->
-<!-- Font Awesome -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-<link rel="stylesheet" href="{{ asset('/plugins/font-awesome/css/font-awesome.min.css') }}">
-<!-- iCheck -->
-<link rel="stylesheet" href="{{ asset('/plugins/iCheck/flat/blue.css') }}">
-<!-- Morris chart -->
-<link rel="stylesheet" href="{{ asset('/plugins/morris/morris.css') }}">
-<!-- jvectormap -->
-<link rel="stylesheet" href="{{ asset('/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
-<!-- Date Picker -->
-<link rel="stylesheet" href="{{ asset('/plugins/datepicker/persian-datepicker.min.css') }}">
-<!-- Daterange picker -->
-<link rel="stylesheet" href="{{ asset('/plugins/daterangepicker/daterangepicker-bs3.css') }}">
-<!-- bootstrap wysihtml5 - text editor -->
-<link rel="stylesheet" href="{{ asset('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-<link rel="stylesheet" href="{{ asset('/plugins/ionslider/ion.rangeSlider.css') }}">
- <link rel="icon" type="image/png" href="home/img/logo.png">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/font-awesome/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/iCheck/flat/blue.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/morris/morris.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/datepicker/persian-datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/daterangepicker/daterangepicker-bs3.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
+<link rel="stylesheet" href="{{ asset('/Admin/plugins/ionslider/ion.rangeSlider.css') }}">
+ <link rel="icon" type="image/png" href="{{ asset('/Home/img/logo.png') }}">
 
 
 

@@ -12,45 +12,64 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/admin.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/admin.scss', 'public/css')
+    .sass('resources/sass/app.scss', 'public/css');
+
 
 
 
 
 mix.styles([
-    'public/home/css/bootstrap.min.css',
-    'public/home/css/TimeCircles.css',
-    'public/home/css/animate.css',
-    'public/home/css/meanmenu.css',
-    'public/home/css/magnific-popup.min.css',
-    'public/home/css/owl.carousel.min.css',
-    'public/home/css/nice-select.css',
-    'public/home/css/jquery.dataTables.min.css',
-    'public/home/css/style.css',
+    'public/css/app.css',
+    'public/Admin/scss/adminlte.css',
+    'public/Admin/scss/bootstrap-rtl.min.css',
+    'public/Admin/scss/custom-style.css',
 
-
-], 'public/css/all.css');
-
-
+], 'public/css/admin.css');
 mix.scripts([
-    'public/home/js/jquery.min.js',
-    'public/home/js/wow.min.js',
-    'public/home/js/popper.min.js',
-    'public/home/js/canvas.min.js',
-    'public/home/js/jquery.meanmenu.min.js',
-    'public/home/js/tilt.jquery.min.js',
-    'public/home/js/jquery.magnific-popup.min.js',
-    'public/home/js/owl.carousel.min.js',
-    'public/home/js/waypoints.min.js',
-    'public/home/js/jquery.counterup.min.js',
-    'public/home/js/jquery.nice-select.min.js',
-    'public/home/js/jquery.ajaxchimp.min.js',
-    'public/home/js/form-validator.min.js',
-    'public/home/js/contact-form-script.js',
-    'public/home/js/TimeCircles.js',
-    'public/home/js/jquery.dataTables.min.js',
-    'public/home/js/main.js',
+    'public/js/app.js',
+    'public/Admin/js/adminlte.js',
+    'public/Admin/js/dashboard.js',
+    'public/Admin/js/demo.js',
 
-], 'public/js/all.js');
+], 'public/js/admin.js');
+
+
+
+
+
+
+
+
+mix.styles([
+    'public/Home/css/bootstrap.min.css',
+    'public/Home/css/animate.css',
+    'public/Home/css/meanmenu.css',
+    'public/Home/css/magnific-popup.min.css',
+    'public/Home/css/owl.carousel.min.css',
+    'public/Home/css/nice-select.css',
+    'public/Home/css/jquery.dataTables.min.css',
+    'public/Home/css/style.css',
+    'public/Home/css/TimeCircles.css',
+    'public/Home/css/responsive.css',
+], 'public/css/home.css');
+mix.scripts([
+    'public/Home/js/jquery.min.js',
+    'public/Home/js/wow.min.js',
+    'public/Home/js/popper.min.js',
+    'public/Home/js/canvas.min.js',
+    'public/Home/js/jquery.meanmenu.min.js',
+    'public/Home/js/tilt.jquery.min.js',
+    'public/Home/js/jquery.magnific-popup.min.js',
+    'public/Home/js/owl.carousel.min.js',
+    'public/Home/js/waypoints.min.js',
+    'public/Home/js/jquery.counterup.min.js',
+    'public/Home/js/jquery.nice-select.min.js',
+    'public/Home/js/jquery.ajaxchimp.min.js',
+    'public/Home/js/form-validator.min.js',
+    'public/Home/js/contact-form-script.js',
+    'public/Home/js/TimeCircles.js',
+    'public/Home/js/jquery.dataTables.min.js',
+    'public/Home/js/main.js',
+], 'public/js/home.js');
+
+
