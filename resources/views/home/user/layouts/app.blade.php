@@ -60,6 +60,7 @@
     <footer>
         @include('home.user.layouts.include.footer')
     </footer>
+    @include('sweet::alert')
 </body>
 
 </html>

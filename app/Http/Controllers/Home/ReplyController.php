@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use Exception;
 use App\Model\Test;
 use App\Model\Reply;
 use App\Model\Question;
@@ -41,10 +42,12 @@ class ReplyController extends Controller
      */
     public function create(Request $request)
     {
+
         $test_id = $request->id;
         $questions = Question::where('test_id', $test_id)
             ->with(['options', 'tests'])
             ->get();
+
         return view("home.user.test", compact('questions', 'test_id'));
     }
 
@@ -63,13 +66,19 @@ class ReplyController extends Controller
             $values  = $explode[0];
             $mark    = $explode[1] == TRUE ? $explode[2] : 0;
             $test_id = $explode[3];
-            Reply::create([
-                'user_id' => auth()->id(),
-                'option_id' => $values,
-                'question_id' => $keys,
-                'test_id' => $test_id,
-                'mark' => $mark,
-            ]);
+            try {
+                Reply::create([
+                    'user_id' => auth()->id(),
+                    'option_id' => $values,
+                    'question_id' => $keys,
+                    'test_id' => $test_id,
+                    'mark' => $mark,
+                ]);
+            } catch (Exception $e) {
+                alert()->error("گزینه موردنظر را دوباره ارسال نمایید","خطا ");
+                return back();
+            }
+
         }
         return redirect()->route('tests.index');
     }

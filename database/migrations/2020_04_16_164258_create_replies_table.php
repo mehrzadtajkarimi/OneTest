@@ -25,6 +25,7 @@ class CreateRepliesTable extends Migration
             $table->foreign('question_id')->references('id')->on('questions');
             $table->unsignedBigInteger('option_id');
             $table->foreign('option_id')->references('id')->on('options');
+            $table->unique(['user_id','test_id','question_id','option_id']);
             $table->float('mark'); //نمره
             $table->timestamps();
         });

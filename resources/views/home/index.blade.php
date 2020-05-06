@@ -6,15 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    {{-- <link rel="stylesheet" href="{{ asset('/Home/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/animate.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/magnific-popup.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/style.css')}}">
-    <link rel="stylesheet" href="{{ asset('/Home/css/responsive.css')}}"> --}}
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
     <link rel="stylesheet" href="{{ asset('/Home/css/icofont.min.css')}}">
     <link rel="stylesheet" href="{{ asset('/css/home.css')}}">
 
@@ -148,7 +141,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                                    value="{{ old('name') }}" placeholder="نام " autocomplete="name" required >
+                                    value="{{ old('name') }}" placeholder="نام " autocomplete="name" required>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -316,23 +309,6 @@
     <div class="back-to-top">بالا</div>
     <!-- End Back Top top -->
 
-    {{-- <!-- Jquery Min JS -->
-    <script src="{{ asset('/Home/js/jquery.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/popper.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/canvas.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/jquery.meanmenu.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/wow.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/tilt.jquery.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/waypoints.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/form-validator.min.js')}}"></script>
-    <script src="{{ asset('/Home/js/contact-form-script.js')}}"></script>
-    <script src="{{ asset('/Home/js/main.js')}}"></script> --}}
     <script src="{{ asset('/js/home.js')}}"></script>
 </body>
 
